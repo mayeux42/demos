@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maquette</title>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet">
+<style>
+/* Gabarit plombier v3 : d'après les références choisies (flowlin et hously). Rempli par make_mockup.py.
+   Vert canard profond, crème chaud, citron vert pour l'action ; Switzer ; cartes arrondies qui s'empilent,
+   titres qui se colorent mot à mot, bandeau défilant. */
+:root {
+  --teal: #0f3a3e; --teal-2: #164a4f; --teal-3: #1f5a60;
+  --cream: #f4f3ea; --sand: #eceae1; --mist: #d6dfdb; --white: #ffffff;
+  --lime: #c9f562; --lime-2: #b9e94b;
+  --ink: #0e2224; --soft: #4b5f60; --line: rgba(14, 34, 36, .08);
+  --r-s: 12px; --r-m: 20px; --r-l: 32px;
+  --m: clamp(16px, 3.4vw, 48px);
+  --sec: clamp(88px, 10vw, 150px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: Switzer, system-ui, sans-serif; font-size: 17px; line-height: 1.55; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { margin: 0; font-weight: 500; letter-spacing: -0.035em; line-height: 1.04; text-wrap: balance; }
+h2 { font-size: clamp(2.1rem, 1.3rem + 3vw, 3.9rem); }
+h3 { font-size: clamp(1.35rem, 1.1rem + .8vw, 1.75rem); letter-spacing: -0.02em; line-height: 1.15; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1320px; margin-inline: auto; padding-inline: var(--m); }
+.tag { display: inline-flex; align-items: center; gap: 10px; padding: 5px 14px 5px 6px; border-radius: 999px; background: var(--white); color: var(--ink); font-size: 13px; font-weight: 500; }
+.tag b { background: var(--lime); padding: 3px 10px; border-radius: 999px; font-weight: 600; }
+.tag.dark { background: var(--teal-2); color: var(--cream); }
+
+/* Boutons : texte + carré flèche, comme les références */
+.btn { display: inline-flex; align-items: center; gap: 14px; padding: 8px 8px 8px 22px; border-radius: 14px; font-weight: 500; white-space: nowrap;
+  background: var(--lime); color: var(--ink); transition: background-color .25s, transform .25s var(--ease); }
+.btn i { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--ink); color: var(--lime); overflow: hidden; }
+.btn i svg { transition: transform .35s var(--ease); }
+.btn:hover { background: var(--lime-2); }
+.btn:hover i svg { transform: translateX(3px) rotate(-45deg); }
+.btn.light { background: var(--white); }
+.btn.light i { background: var(--lime); color: var(--ink); }
+.btn.light:hover { background: var(--cream); }
+.btn.ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 1px rgba(244,243,234,.35); padding: 14px 22px; }
+.btn.ghost:hover { background: rgba(244,243,234,.08); }
+
+/* Menu flottant */
+.nav { position: fixed; z-index: 50; top: 18px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 28px;
+  background: var(--cream); padding: 8px 8px 8px 22px; border-radius: 16px; box-shadow: 0 10px 30px rgba(6, 25, 27, .12); width: max-content; max-width: calc(100% - 24px); }
+.nav .logo { font-weight: 600; font-size: 19px; letter-spacing: -0.03em; }
+.nav .logo span { color: var(--teal-3); font-weight: 500; }
+.nav .links { display: flex; gap: 22px; font-size: 15px; }
+.nav .links a { position: relative; }
+.nav .links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; background: var(--teal); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+.nav .links a:hover::after { transform: scaleX(1); }
+.nav .btn { padding: 6px 6px 6px 16px; font-size: 15px; }
+.nav .btn i { width: 32px; height: 32px; }
+
+/* Premier écran */
+.hero { position: relative; height: 100svh; min-height: 640px; overflow: hidden; color: var(--white); background: var(--teal); }
+.hero .bg { position: absolute; inset: -6% 0 0; }
+.hero .bg img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8, 30, 32, .78) 0%, rgba(8, 30, 32, .38) 48%, rgba(8, 30, 32, .05) 75%), linear-gradient(0deg, rgba(8, 30, 32, .55), rgba(8, 30, 32, 0) 45%); }
+.hero .in { position: absolute; z-index: 2; left: 0; right: 0; bottom: clamp(28px, 6vh, 56px); display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.hero .copy { display: flex; flex-direction: column; align-items: flex-start; gap: 26px; max-width: 760px; }
+.hero h1 { font-size: clamp(3.1rem, 1.5rem + 5.6vw, 6.4rem); line-height: .98; letter-spacing: -0.045em; }
+.hero h1 .l { display: block; overflow: hidden; padding-bottom: .06em; }
+.hero h1 .l span { display: inline-block; white-space: nowrap; }
+.hero h1 .l + .l { color: rgba(255, 255, 255, .62); }
+.hero .lede { font-size: 18px; max-width: 46ch; color: rgba(255,255,255,.88); }
+.hero .acts { display: flex; flex-wrap: wrap; gap: 12px; }
+.case { width: 260px; display: flex; gap: 14px; padding: 18px 22px; border-radius: var(--r-m); background: rgba(214, 223, 219, .92); color: var(--ink); }
+.case img { width: 132px; height: 112px; object-fit: cover; border-radius: 12px; }
+.case .t { display: flex; flex-direction: column; justify-content: space-between; padding: 6px 4px 4px 0; }
+.case .score { font-size: 30px; font-weight: 500; letter-spacing: -0.04em; line-height: 1; }
+.case .sub { font-size: 13px; color: var(--soft); }
+.stars { color: #e3a90f; letter-spacing: 2px; font-size: 13px; }
+
+/* Bandeau défilant */
+.marquee { background: var(--teal); color: var(--cream); overflow: hidden; padding: 22px 0; border-bottom: 1px solid rgba(244,243,234,.08); }
+.marquee .track { display: flex; width: max-content; animation: slide 38s linear infinite; }
+.marquee span { font-size: 22px; letter-spacing: -0.02em; padding-right: 44px; white-space: nowrap; display: inline-flex; align-items: center; gap: 44px; opacity: .9; }
+.marquee span::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* Présentation (fond canard) */
+.about { background: var(--teal); color: var(--cream); padding: var(--sec) 0; border-radius: 0 0 var(--r-l) var(--r-l); }
+.about .grid { display: grid; grid-template-columns: 300px 1fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+.about .portrait { position: relative; border-radius: var(--r-m); overflow: hidden; }
+.about .portrait img { aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
+.about .portrait .tag { position: absolute; left: 12px; bottom: 12px; }
+.statement { font-size: clamp(1.7rem, 1.1rem + 2.2vw, 3rem); line-height: 1.16; letter-spacing: -0.03em; font-weight: 500; }
+.statement .w { color: rgba(244, 243, 234, .22); transition: color .2s; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: clamp(48px, 6vw, 88px); }
+.stat .n { font-size: clamp(2.6rem, 1.6rem + 3vw, 4.4rem); font-weight: 500; letter-spacing: -0.05em; line-height: 1; }
+.stat .k { display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(244,243,234,.75); margin-top: 10px; }
+.stat .k::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--lime); }
+
+/* Pourquoi : cartes qui s'empilent */
+.why { padding: var(--sec) 0; }
+.why .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.why .left { position: sticky; top: 140px; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.why .left p { color: var(--soft); max-width: 42ch; }
+.stack { display: flex; flex-direction: column; gap: 22px; padding-bottom: 40px; }
+.scard { position: sticky; background: var(--white); border-radius: var(--r-m); padding: 30px 32px 34px; min-height: 230px; display: flex; flex-direction: column; justify-content: space-between; gap: 40px;
+  box-shadow: 0 1px 0 var(--line), 0 18px 40px -24px rgba(14, 34, 36, .25); transform-origin: 50% 0; }
+.scard:nth-child(1) { top: 130px; } .scard:nth-child(2) { top: 148px; } .scard:nth-child(3) { top: 166px; } .scard:nth-child(4) { top: 184px; }
+.ico { width: 46px; height: 46px; border-radius: 12px; background: var(--lime); display: grid; place-items: center; color: var(--ink); }
+.scard p { color: var(--soft); margin-top: 10px; max-width: 46ch; }
+
+/* Services : grandes cartes photo + texte, empilées */
+.svc { background: var(--mist); padding: var(--sec) 0; border-radius: var(--r-l); }
+.svc .head { text-align: center; max-width: 900px; margin: 0 auto clamp(48px, 6vw, 80px); display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.svc .head h2 .w { color: rgba(14, 34, 36, .2); }
+.svc-list { max-width: 1040px; margin-inline: auto; display: flex; flex-direction: column; gap: 28px; }
+.svc-card { position: sticky; top: calc(104px + var(--k, 0) * 18px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 10px; padding: 10px; border-radius: var(--r-l);
+  background: var(--sand); box-shadow: 0 30px 60px -40px rgba(14, 34, 36, .45); transform-origin: 50% 0; }
+.svc-card.nophoto { grid-template-columns: 1fr; }
+.svc-card .ph { border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 3.3; }
+.svc-card .ph img { width: 100%; height: 115%; object-fit: cover; }
+.svc-card .tx { background: var(--cream); border-radius: 24px; padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
+.svc-card ul { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; color: var(--soft); }
+.svc-card li { display: flex; gap: 10px; }
+.svc-card li::before { content: ""; flex: none; width: 18px; height: 18px; margin-top: 4px; border-radius: 6px; background: var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230e2224' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center / 12px no-repeat; }
+.svc-card .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.svc-card .pill { font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: var(--white); }
+
+/* Grande image : salles de bain */
+.feature { position: relative; margin: var(--sec) var(--m) 0; border-radius: var(--r-l); overflow: hidden; min-height: 86svh; color: var(--white); display: flex; align-items: flex-end; }
+.feature .bg { position: absolute; inset: -8% 0; }
+.feature .bg img { width: 100%; height: 100%; object-fit: cover; }
+.feature::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8, 30, 32, .82), rgba(8, 30, 32, .1) 60%); }
+.feature .in { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: 32px; padding: clamp(28px, 4vw, 56px); align-items: end; width: 100%; }
+.feature p { color: rgba(255,255,255,.86); max-width: 52ch; }
+.feature .side { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+
+/* Urgence : liste + bon de conduite */
+.urg { padding: var(--sec) 0; }
+.urg .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.urg .left { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+.urg .left > p { color: var(--soft); max-width: 44ch; }
+.choices { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 10px; width: 100%; }
+.choices button { width: 100%; display: flex; align-items: center; gap: 14px; text-align: left; font: inherit; font-weight: 500; font-size: 17px; color: var(--ink);
+  background: var(--white); border: 0; border-radius: 14px; padding: 12px 14px; cursor: pointer; transition: background-color .25s, transform .25s var(--ease); }
+.choices button:hover { transform: translateX(4px); }
+.choices button .ico { width: 36px; height: 36px; border-radius: 10px; background: var(--teal); color: var(--lime); flex: none; }
+.choices button[aria-pressed="true"] { background: var(--lime); }
+.choices button[aria-pressed="true"] .ico { background: var(--ink); }
+.guide { position: sticky; top: 120px; background: var(--teal); color: var(--cream); border-radius: var(--r-l); padding: 10px; }
+.guide .ph { border-radius: 24px; overflow: hidden; aspect-ratio: 16 / 9; }
+.guide .ph img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
+.guide .body { padding: 26px 24px 18px; }
+.guide .swap { transition: opacity .25s, transform .25s var(--ease); }
+.guide .swap.out { opacity: 0; transform: translateY(8px); }
+.guide ol { margin: 18px 0 26px; padding: 0; list-style: none; display: grid; gap: 12px; counter-reset: s; }
+.guide li { display: flex; gap: 14px; counter-increment: s; color: rgba(244,243,234,.9); }
+.guide li::before { content: counter(s); flex: none; width: 28px; height: 28px; border-radius: 8px; background: var(--teal-3); color: var(--lime); display: grid; place-items: center; font-size: 14px; font-weight: 600; }
+
+/* Zone */
+.zone { background: var(--sand); padding: var(--sec) 0; border-radius: var(--r-l); }
+.zone .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.zone .left { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+.zone .left p { color: var(--soft); max-width: 44ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chips span { padding: 10px 16px; border-radius: 999px; background: var(--white); font-weight: 500; font-size: 15px; transition: background-color .25s; }
+.chips span:hover { background: var(--lime); }
+.hours { display: grid; gap: 4px; margin-top: 6px; }
+.hours b { font-weight: 600; }
+.zone .ph { border-radius: var(--r-l); overflow: hidden; }
+.zone .ph img { width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; }
+
+/* Questions : accordéon */
+.faq { padding: var(--sec) 0; }
+.faq .grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.faq .left { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; position: sticky; top: 140px; }
+.faq .left p { color: var(--soft); max-width: 40ch; }
+.qa { display: grid; gap: 12px; }
+.qa details { background: var(--white); border-radius: 16px; padding: 4px 6px 4px 22px; }
+.qa summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; cursor: pointer; font-weight: 500; font-size: 17px; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary i { flex: none; width: 34px; height: 34px; border-radius: 10px; background: var(--teal); color: var(--lime); display: grid; place-items: center; transition: transform .3s var(--ease), background-color .3s; }
+.qa details[open] summary i { transform: rotate(45deg); background: var(--ink); }
+.qa details p { color: var(--soft); padding: 0 50px 18px 0; }
+
+/* Appel final */
+.cta { margin: 0 var(--m); background: var(--teal); color: var(--cream); border-radius: var(--r-l); padding: clamp(64px, 9vw, 130px) var(--m); text-align: center; position: relative; overflow: hidden; }
+.cta h2 { font-size: clamp(2.4rem, 1.2rem + 4.6vw, 5.4rem); max-width: 14ch; margin: 22px auto 0; }
+.cta h2 em { font-style: normal; color: var(--lime); }
+.cta p { color: rgba(244,243,234,.78); max-width: 50ch; margin: 22px auto 34px; }
+.cta .acts { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+.foot { padding: 72px 0 36px; }
+.foot .top { display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 32px; }
+.foot .logo { font-weight: 600; font-size: 24px; letter-spacing: -0.03em; }
+.foot .logo + p { color: var(--soft); margin-top: 12px; max-width: 34ch; }
+.foot h4 { margin: 0 0 14px; font-size: 14px; font-weight: 600; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; color: var(--soft); font-size: 15px; }
+.foot ul a:hover { color: var(--ink); }
+.foot .credits { margin: 14px 0 0; font-size: 12px; color: var(--soft); }
+.nav .logo img, .foot .logo img { display: block; height: 34px; width: auto; max-width: 180px; object-fit: contain; }
+.foot .logo img { height: 44px; }
+/* Bandeau de confiance : labels, assurances, affiliations écrits sur le site */
+.trust { padding: clamp(36px, 5vw, 56px) 0; }
+.trust .row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; }
+.trust .row span { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px 10px 10px; border-radius: 999px; background: var(--white); font-weight: 500; font-size: 15px; }
+.trust .row i { width: 26px; height: 26px; border-radius: 8px; background: var(--lime); display: grid; place-items: center; }
+/* Avis clients recopiés du site */
+.reviews { padding: var(--sec) 0; }
+.reviews .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px 40px; margin-bottom: 40px; }
+.reviews .cards { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 18px; }
+.reviews blockquote { margin: 0; background: var(--white); border-radius: var(--r-m); padding: 30px 28px; display: flex; flex-direction: column; justify-content: space-between; gap: 22px; }
+.reviews blockquote p { font-size: 17px; line-height: 1.6; }
+.reviews blockquote p::before { content: "“"; display: block; font-size: 48px; line-height: .6; color: var(--teal-3); margin-bottom: 10px; }
+.reviews cite { font-style: normal; font-weight: 600; font-size: 15px; }
+.reviews cite span { font-weight: 400; color: var(--soft); }
+/* Réalisations : photos du prospect */
+.works { padding: 0 0 var(--sec); }
+.works h2 { margin-bottom: 36px; }
+.works .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.works figure { margin: 0; border-radius: var(--r-m); overflow: hidden; background: var(--sand); }
+.works img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s var(--ease); }
+.works figure:hover img { transform: scale(1.04); }
+.cta .info { font-size: 15px; margin-top: 18px; color: rgba(244,243,234,.7); }
+/* Mentions légales : petit panneau, sans prendre de place dans la page */
+.foot .legal-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+dialog.legal { border: 0; border-radius: var(--r-m); padding: 28px 30px; max-width: 520px; width: calc(100% - 32px); color: var(--ink); font-size: 15px; }
+dialog.legal::backdrop { background: rgba(6, 25, 27, .5); }
+dialog.legal h3 { margin-bottom: 14px; }
+dialog.legal p { margin: 4px 0; }
+dialog.legal button { margin-top: 18px; }
+.foot .credits a { text-decoration: underline; text-underline-offset: 2px; }
+.foot .bottom { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; font-size: 13px; color: var(--soft); }
+
+/* Appel fixe sur téléphone */
+.callbar { display: none; }
+
+@media (max-width: 980px) {
+  .nav .links { display: none; }
+  .hero .in { flex-direction: column; align-items: flex-start; }
+  .about .grid, .why .grid, .urg .grid, .zone .grid, .faq .grid, .feature .in { grid-template-columns: 1fr; }
+  .about .portrait { max-width: 280px; }
+  .why .left, .faq .left, .guide { position: static; }
+  .reviews .cards, .works .grid3 { grid-template-columns: 1fr; }
+  .svc-card { grid-template-columns: 1fr; }
+  .scard, .svc-card { position: static; }
+  .svc-card .ph { aspect-ratio: 16 / 9; }
+  .foot .top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .nav { top: 10px; gap: 14px; padding-left: 16px; }
+  .hero .lede { font-size: 16px; }
+  .case { width: 100%; }
+  .stats { grid-template-columns: 1fr; gap: 28px; }
+  .scard { min-height: 0; }
+  .foot .top { grid-template-columns: 1fr; }
+  .callbar { display: block; position: fixed; z-index: 40; left: 10px; right: 10px; bottom: 10px; transform: translateY(150%); transition: transform .35s var(--ease); }
+  .callbar.show { transform: none; }
+  .callbar .btn { width: 100%; justify-content: space-between; box-shadow: 0 10px 30px rgba(6,25,27,.3); }
+  .foot { padding-bottom: 100px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee .track { animation: none; }
+  .statement .w, .svc .head h2 .w { color: inherit !important; }
+  * { transition-duration: .01ms !important; }
+}
+/* Palettes : la plus proche de l'identité actuelle du plombier (choisie par le script). */
+[data-palette="marine"] { --teal: #182944; --teal-2: #213659; --teal-3: #2d4670; --lime: #ffc228; --lime-2: #f5b400; --mist: #d3d9e3; }
+[data-palette="foret"] { --teal: #1d3a2c; --teal-2: #264a38; --teal-3: #315c46; --lime: #e7d36a; --lime-2: #dcc552; --mist: #d9dfd6; }
+[data-palette="ardoise"] { --teal: #23282d; --teal-2: #2e353b; --teal-3: #3b444b; --lime: #ff9a52; --lime-2: #f88a3c; --mist: #dcdcd8; }
+</style>
+</head>
+<body>
+<div id="page"></div>
+<script id="data" type="application/json">{"palette": "canard", "nom": "Plomberie Abamine", "nom_court": "Abamine", "metier": "plombier chauffagiste", "ville": "Toulon", "titre_l1": "Votre plombier", "titre_l2": "à Toulon", "accroche": "Dépannage, installation et rénovation en plomberie, chauffage et électricité, par une entreprise familiale à votre écoute.", "badge": {"fort": "7 j/7", "texte": "Dépannage de 8 h à 20 h"}, "telephone2": "04 89 09 55 46", "adresse": ["2 rue Paul Arène", "Toulon"], "adresse_courte": "Artisan local, rue Paul Arène", "horaires": [{"jours": "7 jours sur 7", "heures": "8 h – 20 h"}], "horaires_court": "7 j/7, de 8 h à 20 h", "avis": null, "presentation": "Entreprise familiale de plomberie, chauffage et électricité, nous assurons l'installation, la rénovation tous corps d'état et le dépannage d'urgence dans le Var.", "chiffres": [{"valeur": "10 ans+", "libelle": "d'expérience en plomberie"}], "engagements_titre": "Un travail soigné, au juste prix", "engagements_texte": "Nous vous informons à chaque étape et restons à l'écoute de vos besoins.", "engagements": [{"titre": "Recherche de fuite précise", "texte": "Des techniques modernes pour localiser la fuite en limitant les dégâts sur vos installations.", "icone": "diagnostic"}, {"titre": "Tarifs transparents", "texte": "Un devis clair et un travail de qualité au juste prix.", "icone": "devis"}, {"titre": "Matériaux et normes", "texte": "Des matériaux de qualité et le respect des normes en vigueur sur chaque chantier.", "icone": "qualite"}, {"titre": "Suivi après intervention", "texte": "Un suivi personnalisé et un service après-vente pour une relation de confiance durable.", "icone": "suivi"}], "services_titre": "Plomberie, chauffage et rénovation : toutes vos interventions assurées par un seul artisan", "services": [{"titre": "Dépannage et recherche de fuite", "points": ["Détection de fuite par techniques modernes", "Réparation de tuyauterie", "Intervention rapide en cas d'urgence"], "etiquette": "7 j/7", "theme": "fuite", "photo": {"src": "https://images.unsplash.com/photo-1646009445351-b8192e095f3a?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8MXx8bGVha2luZyUyMHBpcGV8ZW58MXwwfHx8MTc5MzA0MjUwOXww&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "Dépannage et recherche de fuite", "w": 1100, "h": 729}}, {"titre": "Débouchage de canalisation", "points": ["Éviers et toilettes bouchés", "Intervention sur tous types de tuyauteries", "Écoulement rétabli durablement"], "etiquette": "", "theme": "debouchage", "photo": {"src": "https://images.unsplash.com/photo-1700174542278-4f8fc5ab6565?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8NHx8c2luayUyMGRyYWlufGVufDF8MHx8fDE3OTMwNDI1MTB8MA&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "Débouchage de canalisation", "w": 1100, "h": 733}}, {"titre": "Sanitaires et salle de bain", "points": ["Pose de WC, lavabo et douche", "Installation de receveur et de baignoire", "Conseils sur les équipements adaptés"], "etiquette": "", "theme": "salle-de-bain", "photo": {"src": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwYmF0aHJvb218ZW58MXwwfHx8MTc5MzA0MjUxMXww&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "Sanitaires et salle de bain", "w": 1100, "h": 733}}, {"titre": "Chauffe-eau et cumulus", "points": ["Installation de chauffe-eau et cumulus", "Réparation en cas de manque d'eau chaude", "Détartrage et entretien"], "etiquette": "", "theme": "chauffe-eau", "photo": {"src": "https://images.unsplash.com/photo-1620653713380-7a34b773fef8?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8Mnx8d2F0ZXIlMjBoZWF0ZXJ8ZW58MXwwfHx8MTc5MzA0MjUxM3ww&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "Chauffe-eau et cumulus", "w": 1100, "h": 990}}, {"titre": "Chaudière et chauffage", "points": ["Installation et réparation de chaudière à gaz ou électrique", "Entretien régulier pour la sécurité", "Radiateurs et système de chauffage"], "etiquette": "Contrat d'entretien", "theme": "chauffage", "photo": {"src": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8MXx8d2F0ZXIlMjBoZWF0ZXJ8ZW58MXwwfHx8MTc5MzA0MjUxM3ww&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "Chaudière et chauffage", "w": 1100, "h": 825}}], "grand_bloc": {"titre": "Une salle de bain rénovée, de l'analyse à la pose", "texte": "Nous analysons vos besoins, puis installons douche, receveur, lavabo, WC ou baignoire avec des matériaux de qualité. Nous assurons aussi la rénovation tous corps d'état et la pose de cuisine."}, "zone": {"titre": "Toulon et ses environs.", "texte": "Notre proximité nous permet d'intervenir dans les meilleurs délais dans ces communes du Var, et dans bien d'autres villes de la région.", "communes": ["Toulon", "La Valette-du-Var", "La Garde", "Le Pradet", "La Farlède", "Ollioules", "La Seyne-sur-Mer", "Sanary", "La Crau"]}, "faq": [{"q": "Quels types de sanitaires installez-vous ?", "r": "Nous installons des sanitaires de marques reconnues pour leur qualité et leur durabilité : WC, lavabos, douches, receveurs et baignoires."}, {"q": "Proposez-vous des contrats d'entretien ?", "r": "Oui, nous proposons des contrats d'entretien pour assurer le bon fonctionnement de vos installations, notamment votre chaudière à gaz ou électrique."}, {"q": "Comment recherchez-vous une fuite sans abîmer mon logement ?", "r": "Nous utilisons des techniques modernes de recherche de fuite, qui permettent de la localiser en minimisant les dommages sur vos installations."}, {"q": "Pouvez-vous rénover une pièce complète ?", "r": "Oui, nous assurons la rénovation tous corps d'état : plomberie, pose de cuisine, de WC ou de receveur de douche, du simple dépannage aux projets d'envergure."}, {"q": "Intervenez-vous aussi pour l'électricité ?", "r": "Oui, nous réalisons l'électricité générale, en installation neuve comme en rénovation, avec des travaux conformes aux normes en vigueur."}, {"q": "Comment éviter les problèmes de plomberie courants ?", "r": "Détartrez régulièrement vos appareils (chauffe-eau, robinetterie), ne jetez pas de déchets solides dans les canalisations et faites vérifier votre installation de temps en temps par un professionnel."}], "avis_clients": [], "confiance": [], "mentions": {"raison_sociale": "", "forme": "", "siret": "789 699 469 00027", "adresse": "2 rue Paul Arène, Toulon", "autres": []}, "telephone": "06 98 72 14 69", "email": "plomberie.abamine@laposte.net", "siret": "789 699 469 00027", "logo": {"src": "img/logo.jpg", "alt": "Logo", "w": 185, "h": 140}, "realisations": [{"src": "img/chantier-1.jpg", "alt": "Salle bain lavabo miroir moderne", "w": 615, "h": 615}, {"src": "img/chantier-2.jpg", "alt": "Salle bain douche toilettes rénovée", "w": 615, "h": 615}, {"src": "img/chantier-3.jpg", "alt": "Carrelage mosaïque blanc salle bain", "w": 615, "h": 615}], "photos": {"hero": {"src": "https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8Mnx8cGx1bWJlcnxlbnwxfDF8fHwxNzkzMDQyNTA4fDA&ixlib=rb-4.1.0&w=2000&q=80&auto=format&fit=crop", "alt": "Plombier au travail", "w": 2000, "h": 2636}, "about": {"src": "img/equipe.jpg", "alt": "Vitrine boutique plomberie bien éclairée", "w": 960, "h": 960}, "feature": {"src": "https://images.unsplash.com/photo-1638799869566-b17fa794c4de?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8Nnx8bHV4dXJ5JTIwYmF0aHJvb218ZW58MXwwfHx8MTc5MzA0MjUxMnww&ixlib=rb-4.1.0&w=2000&q=80&auto=format&fit=crop", "alt": "Salle de bain rénovée", "w": 2000, "h": 1333}, "zone": {"src": "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8M3x8bW9kZXJuJTIwYmF0aHJvb218ZW58MXwwfHx8MTc5MzA0MjUxMXww&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "white ceramic bathtub near green potted plant", "w": 1100, "h": 734}}, "urgences": [{"titre": "Une fuite d'eau", "icone": "fuite", "gestes": ["Coupez l'arrivée d'eau générale, au robinet près du compteur.", "Si l'eau approche d'une prise ou d'un appareil, coupez aussi l'électricité.", "Placez une bassine sous la fuite, épongez, puis appelez-nous."], "photo": {"src": "https://images.unsplash.com/photo-1669920282730-ab422e592f97?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8Mnx8bGVha2luZyUyMHBpcGV8ZW58MXwwfHx8MTc5MzA0MjUwOXww&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "Une fuite d'eau", "w": 1100, "h": 724}}, {"titre": "WC ou évier bouché", "icone": "debouchage", "gestes": ["N'actionnez plus la chasse d'eau pour éviter le débordement.", "Évitez les déboucheurs chimiques : ils abîment les canalisations.", "Essayez la ventouse ; si l'eau ne descend toujours pas, appelez-nous."], "photo": {"src": "https://images.unsplash.com/photo-1542855368-ca6ea825bca2?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8Mnx8c2luayUyMGRyYWlufGVufDF8MHx8fDE3OTMwNDI1MTB8MA&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "WC ou évier bouché", "w": 1100, "h": 799}}, {"titre": "Plus d'eau chaude", "icone": "eau", "gestes": ["Vérifiez au tableau électrique que le disjoncteur du chauffe-eau n'a pas sauté.", "Regardez s'il y a de l'eau sous le ballon ou au groupe de sécurité.", "Notez la marque et l'âge de l'appareil, puis appelez-nous."], "photo": {"src": "https://images.unsplash.com/photo-1685949546169-0d6e2505acae?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8M3x8c2hvd2VyJTIwaGVhZCUyMHdhdGVyfGVufDF8MHx8fDE3OTMwNDY4NjJ8MA&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "Plus d'eau chaude", "w": 1100, "h": 733}}, {"titre": "La chaudière s'est arrêtée", "icone": "chaudiere", "gestes": ["Notez le code erreur affiché sur l'écran de la chaudière.", "Vérifiez la pression du circuit : en général entre 1 et 2 bars.", "Odeur de gaz : n'actionnez aucun interrupteur, aérez, sortez et appelez le 0 800 47 33 33 (Urgence sécurité gaz)."], "photo": {"src": "https://images.unsplash.com/photo-1658758904121-ee49fc5e205c?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8M3x8Z2FzJTIwYm9pbGVyfGVufDF8MHx8fDE3OTMwNDI1MTV8MA&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "La chaudière s'est arrêtée", "w": 1100, "h": 732}}, {"titre": "Un dégât des eaux", "icone": "degat", "gestes": ["Coupez l'eau et l'électricité de la pièce touchée.", "Prenez des photos pour votre assurance.", "Prévenez le voisin du dessous ou le syndic, puis appelez-nous pour la recherche de fuite."], "photo": {"src": "https://images.unsplash.com/photo-1660642670168-d2c7a9921d6d?ixid=M3wxMTE0NDc0fDB8MXxzZWFyY2h8MXx8d2F0ZXIlMjBkYW1hZ2V8ZW58MXwwfHx8MTc5MzA0Njg2NHww&ixlib=rb-4.1.0&w=1100&q=80&auto=format&fit=crop", "alt": "Un dégât des eaux", "w": 1100, "h": 618}}], "credits_photos": [{"auteur": "Timur Shakerzianov", "lien": "https://unsplash.com/@shaker_jpg?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Roger Starnes Sr", "lien": "https://unsplash.com/@rstar50?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Giorgio Trovato", "lien": "https://unsplash.com/@giorgiotrovato?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Lotus Design N Print", "lien": "https://unsplash.com/@lotusdnp?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Marian Florinel Condruz", "lien": "https://unsplash.com/@gottapics?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Compagnons", "lien": "https://unsplash.com/@sigmund?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Steven Ungermann", "lien": "https://unsplash.com/@steveungermann?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Ian Talmacs", "lien": "https://unsplash.com/@iantalmacs?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Sasikan Ulevik", "lien": "https://unsplash.com/@ulevik?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Igal Ness", "lien": "https://unsplash.com/@igalness?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Immo Wegmann", "lien": "https://unsplash.com/@tinkerman?utm_source=mdw_maquettes&utm_medium=referral"}, {"auteur": "Piotr Łaskawski", "lien": "https://unsplash.com/@tot87?utm_source=mdw_maquettes&utm_medium=referral"}]}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(() => {
+  // Gabarit « plombier v3 » : toute la page est construite à partir du JSON ci-dessus (contenu + photos choisies).
+  const D = JSON.parse(document.getElementById('data').textContent);
+  document.documentElement.dataset.palette = D.palette || 'canard';
+  document.title = `${D.nom} · ${D.titre_l1} ${D.titre_l2}`;
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const tel = (t) => 'tel:' + String(t).replace(/[^\d+]/g, '');
+  const has = (a) => Array.isArray(a) && a.length > 0;
+  const arrow = '<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>';
+  const btn = (label, href, cls = '') => `<a class="btn ${cls}" href="${esc(href)}">${esc(label)} ${arrow}</a>`;
+  const call = (label = `Appeler le ${D.telephone}`, cls = '') => btn(label, tel(D.telephone), cls);
+  const img = (p, attrs = '') => p ? `<img src="${esc(p.src)}" alt="${esc(p.alt || '')}" width="${p.w || 1600}" height="${p.h || 1067}" ${attrs}>` : '';
+  const P = D.photos || {};
+  const ICONS = {
+    diagnostic: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>',
+    devis: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>',
+    qualite: '<path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.4l-5.3 2.7 1-5.8-4.2-4.1 5.9-.9z"/>',
+    suivi: '<path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/>',
+    rapide: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+    garantie: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+    fuite: '<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+    debouchage: '<path d="M4 4h16v6a8 8 0 0 1-16 0z"/><path d="M12 18v3"/>',
+    eau: '<path d="M8 3v4M12 3v4M16 3v4"/><rect x="5" y="9" width="14" height="12" rx="3"/>',
+    chaudiere: '<path d="M12 2c2 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-7 1 2 3 2 3-4z"/>',
+    degat: '<path d="M3 12l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M12 13s-2 2.2-2 3.5a2 2 0 0 0 4 0c0-1.3-2-3.5-2-3.5z"/>',
+  };
+  const ico = (k, size = 22) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[k] || ICONS.qualite}</svg>`;
+
+  const nav = [['Services', '#services'], has(D.realisations) && ['Réalisations', '#realisations'], has(D.avis_clients) && ['Avis', '#temoignages'], has(D.urgences) && ['Urgence', '#urgence'], D.zone && D.zone.communes && D.zone.communes.length >= 3 && ['Zone', '#zone'], has(D.faq) && ['Questions', '#questions']].filter(Boolean).slice(0, 5);
+  // Zone : seulement avec au moins 3 communes ; bandeau défilant à partir de 5.
+  const towns = (D.zone && D.zone.communes && D.zone.communes.length >= 3) ? D.zone.communes : [];
+  let html = '';
+
+  const logo = (D.logo && D.logo.src) ? `<img src="${esc(D.logo.src)}" alt="${esc(D.nom)}" width="${D.logo.w || 180}" height="${D.logo.h || 60}">` : `${esc(D.nom_court || D.nom)}<span>.</span>`;
+  html += `<nav class="nav" aria-label="Menu principal"><a class="logo" href="#top">${logo}</a>
+    <div class="links">${nav.map(([n, h]) => `<a href="${h}">${n}</a>`).join('')}</div>${btn('Appeler', tel(D.telephone))}</nav>`;
+
+  html += `<header class="hero" id="top"><div class="bg">${img(P.hero)}</div><div class="in wrap"><div class="copy">
+    ${D.badge ? `<span class="tag" data-hero><b>${esc(D.badge.fort)}</b> ${esc(D.badge.texte)}</span>` : ''}
+    <h1><span class="l"><span>${esc(D.titre_l1)}</span></span><span class="l"><span>${esc(D.titre_l2)}</span></span></h1>
+    <p class="lede" data-hero>${esc(D.accroche)}</p>
+    <div class="acts" data-hero>${call(undefined, 'light')}<a class="btn ghost" href="#services">Voir nos services</a></div></div>
+    ${D.avis ? `<a class="case" href="#avis" data-hero aria-label="Note de ${esc(D.avis.note)} sur 5${D.avis.source === 'google' ? ` sur Google, ${esc(D.avis.nombre)} avis` : `, ${esc(D.avis.nombre)} avis`}"><div class="t"><span class="stars" aria-hidden="true">★★★★★</span><span class="score">${esc(D.avis.note)}/5</span><span class="sub">${D.avis.source === 'google' ? `${esc(D.avis.nombre)} avis Google` : `Note moyenne de ${esc(D.avis.nombre)} clients`}</span></div></a>` : ''}
+    </div></header>`;
+
+  if (towns.length >= 5) {
+    const row = towns.map((t) => `<span>${esc(t)}</span>`).join('');
+    html += `<div class="marquee" aria-label="Communes desservies"><div class="track">${row}${row.replace(/<span>/g, '<span aria-hidden="true">')}</div></div>`;
+  }
+
+  if (D.presentation) {
+    html += `<section class="about" id="avis"><div class="wrap"><div class="grid">
+      ${P.about ? `<figure class="portrait" style="margin:0">${img(P.about, 'loading="lazy"')}${D.adresse_courte ? `<span class="tag">${esc(D.adresse_courte)}</span>` : ''}</figure>` : '<div></div>'}
+      <div><p class="statement" data-words>${esc(D.presentation)}</p>
+      ${has(D.chiffres) ? `<div class="stats">${D.chiffres.slice(0, 3).map((c) => `<div class="stat"><div class="n">${esc(c.valeur)}</div><div class="k">${esc(c.libelle)}</div></div>`).join('')}</div>` : ''}
+      </div></div></div></section>`;
+  }
+
+  if (has(D.confiance)) {
+    const check = '<i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></i>';
+    html += `<section class="trust" aria-label="Gages de confiance"><div class="wrap row">${D.confiance.slice(0, 6).map((c) => `<span>${check}${esc(c)}</span>`).join('')}</div></section>`;
+  }
+
+  if (has(D.engagements)) {
+    html += `<section class="why"><div class="wrap grid"><div class="left"><span class="tag">Notre façon de travailler</span>
+      <h2>${esc(D.engagements_titre || 'Un service clair, du premier appel au chantier propre.')}</h2>
+      ${D.engagements_texte ? `<p>${esc(D.engagements_texte)}</p>` : ''}${btn('Nous appeler', tel(D.telephone))}</div>
+      <div class="stack">${D.engagements.slice(0, 4).map((e) => `<article class="scard"><span class="ico">${ico(e.icone)}</span><div><h3>${esc(e.titre)}</h3><p>${esc(e.texte)}</p></div></article>`).join('')}</div></div></section>`;
+  }
+
+  html += `<section class="svc" id="services"><div class="wrap"><div class="head"><span class="tag">Nos services</span>
+    <h2 data-words>${esc(D.services_titre || 'Tout ce dont votre maison a besoin.')}</h2></div><div class="svc-list">
+    ${(D.services || []).slice(0, 5).map((s, k) => `<article class="svc-card${s.photo ? '' : ' nophoto'}" style="--k:${k}">${s.photo ? `<div class="ph">${img(s.photo, 'loading="lazy" data-par')}</div>` : ''}
+      <div class="tx"><div><h3>${esc(s.titre)}</h3><ul>${(s.points || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+      <div class="row">${s.etiquette ? `<span class="pill">${esc(s.etiquette)}</span>` : '<span></span>'}${call('Appeler')}</div></div></article>`).join('')}
+    </div></div></section>`;
+
+  if (has(D.avis_clients)) {
+    const rv = D.avis_clients.slice(0, 3);
+    html += `<section class="reviews" id="temoignages"><div class="wrap"><div class="head"><div><span class="tag">Avis clients</span><h2 style="margin-top:18px">Ce que disent nos clients.</h2></div>
+      ${D.avis && D.avis.source === 'google' ? `<p><b>${esc(D.avis.note)}/5</b> sur ${esc(D.avis.nombre)} avis Google</p>` : ''}</div>
+      <div class="cards" style="--n:${rv.length}">${rv.map((r) => `<blockquote><p>${esc(r.texte)}</p><cite>${esc(r.auteur)}${r.ville ? ` <span>· ${esc(r.ville)}</span>` : ''}</cite></blockquote>`).join('')}</div></div></section>`;
+  }
+
+  if (has(D.realisations)) {
+    html += `<section class="works" id="realisations"><div class="wrap"><span class="tag">Réalisations</span><h2 style="margin-top:18px">Nos chantiers.</h2>
+      <div class="grid3">${D.realisations.slice(0, 6).map((r) => `<figure>${img(r, 'loading="lazy"')}</figure>`).join('')}</div></div></section>`;
+  }
+
+  if (D.grand_bloc && P.feature) {
+    html += `<section class="feature" aria-labelledby="gb"><div class="bg">${img(P.feature, 'loading="lazy" data-par')}</div><div class="in">
+      <h2 id="gb">${esc(D.grand_bloc.titre)}</h2><div class="side"><p>${esc(D.grand_bloc.texte)}</p>
+      ${D.email ? btn('Parler de mon projet', `mailto:${D.email}?subject=${encodeURIComponent('Mon projet')}`) : call()}</div></div></section>`;
+  }
+
+  if (has(D.urgences)) {
+    html += `<section class="urg" id="urgence"><div class="wrap grid"><div class="left"><span class="tag"><b>Urgence</b> Les bons gestes</span>
+      <h2>Que se passe-t-il chez vous ?</h2><p>Choisissez votre situation : voici quoi faire tout de suite, en attendant notre arrivée.</p>
+      <ul class="choices" id="choices"></ul></div>
+      <div class="guide" aria-live="polite"><div class="ph"><img id="g-img" src="" alt="" width="1200" height="800"></div>
+      <div class="body"><div class="swap" id="g-body"></div>${call()}</div></div></div></section>`;
+  }
+
+  if (towns.length) {
+    html += `<section class="zone" id="zone"><div class="wrap grid"><div class="left"><span class="tag">Zone d'intervention</span>
+      <h2>${esc(D.zone.titre || `${D.ville} et ses environs.`)}</h2>${D.zone.texte ? `<p>${esc(D.zone.texte)}</p>` : ''}
+      <div class="chips">${towns.map((t) => `<span>${esc(t)}</span>`).join('')}</div>
+      <div class="hours">${(D.horaires || []).map((x) => `<span><b>${esc(x.jours)}</b>, ${esc(x.heures)}</span>`).join('')}${has(D.adresse) ? `<span>${esc(D.adresse.join(', '))}</span>` : ''}</div></div>
+      ${P.zone ? `<div class="ph">${img(P.zone, 'loading="lazy" data-par')}</div>` : ''}</div></section>`;
+  }
+
+  if (has(D.faq)) {
+    const plus = '<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i>';
+    html += `<section class="faq" id="questions"><div class="wrap grid"><div class="left"><span class="tag">Questions fréquentes</span><h2>Vos questions, nos réponses.</h2>
+      <p>Une autre question ? Le plus simple est de nous appeler : on vous répond directement.</p></div>
+      <div class="qa">${D.faq.map((f, i) => `<details${i ? '' : ' open'}><summary>${esc(f.q)}${plus}</summary><p>${esc(f.r)}</p></details>`).join('')}</div></div></section>`;
+  }
+
+  html += `<section class="cta"><span class="tag dark">${esc(D.nom)}</span><h2>Une fuite ? Un projet ? <em>On s'en occupe.</em></h2>
+    <p>${esc(D.horaires_court ? `Appelez-nous ${D.horaires_court}` : 'Appelez-nous')}${D.email ? ', ou écrivez-nous pour un devis.' : '.'}</p>
+    <div class="acts">${call()}${D.email ? `<a class="btn ghost" href="mailto:${esc(D.email)}?subject=${encodeURIComponent('Demande de devis')}">Demander un devis par email</a>` : ''}</div>
+    ${has(D.horaires) || has(D.adresse) ? `<p class="info">${[(D.horaires || []).map((x) => `${x.jours}, ${x.heures}`).join(' · '), (D.adresse || []).join(', ')].filter(Boolean).map(esc).join(' — ')}</p>` : ''}</section>`;
+
+  html += `<footer class="foot"><div class="wrap"><div class="top">
+    <div><div class="logo">${logo}</div><p>${esc(D.metier ? D.metier.charAt(0).toUpperCase() + D.metier.slice(1) : '')}.</p></div>
+    <div><h4>Services</h4><ul>${(D.services || []).slice(0, 5).map((s) => `<li><a href="#services">${esc(s.titre)}</a></li>`).join('')}</ul></div>
+    <div><h4>Contact</h4><ul>${[D.telephone, D.telephone2].filter(Boolean).map((t) => `<li><a href="${tel(t)}">${esc(t)}</a></li>`).join('')}${D.email ? `<li><a href="mailto:${esc(D.email)}">${esc(D.email)}</a></li>` : ''}</ul></div>
+    ${has(D.adresse) || D.horaires_court ? `<div><h4>${has(D.adresse) ? 'Adresse' : 'Horaires'}</h4><ul>${(D.adresse || []).map((l) => `<li>${esc(l)}</li>`).join('')}${D.horaires_court ? `<li>${esc(D.horaires_court)}</li>` : ''}</ul></div>` : ''}</div>
+    <div class="bottom"><span>${esc(D.nom)}${D.siret ? ` · SIRET ${esc(D.siret)}` : ''} · <button type="button" class="legal-link" id="legal-open">Mentions légales</button></span><span>Maquette réalisée par MDW Agency, proposition non contractuelle</span></div>
+    ${has(D.credits_photos) ? `<p class="credits">Photos d'illustration : ${D.credits_photos.map((c) => `<a href="${esc(c.lien)}" rel="noopener">${esc(c.auteur)}</a>`).join(', ')} sur <a href="https://unsplash.com/?utm_source=mdw_maquettes&utm_medium=referral" rel="noopener">Unsplash</a>.</p>` : ''}</div></footer>`;
+
+  const M = D.mentions || {};
+  html += `<dialog class="legal" id="legal"><h3>Mentions légales</h3>
+    ${[M.raison_sociale || D.nom, M.forme, M.siret || D.siret ? `SIRET ${M.siret || D.siret}` : '', M.adresse || (D.adresse || []).join(', ')].filter(Boolean).map((l) => `<p>${esc(l)}</p>`).join('')}
+    ${(M.autres || []).map((l) => `<p>${esc(l)}</p>`).join('')}
+    <p style="margin-top:12px;color:var(--soft)">Maquette de démonstration réalisée par MDW Agency, non indexée et non contractuelle.</p>
+    <button type="button" class="btn" id="legal-close">Fermer</button></dialog>`;
+  html += `<div class="callbar">${call()}</div>`;
+  document.getElementById('page').innerHTML = html;
+  // Grand titre : chaque ligne tient sur une ligne, quelle que soit la longueur du nom de la ville.
+  const longest = Math.max(String(D.titre_l1).length, String(D.titre_l2).length);
+  document.querySelector('.hero h1').style.fontSize = `min(clamp(3.1rem, 1.5rem + 5.6vw, 6.4rem), calc(min(780px, 100vw - 2 * var(--m)) / ${(longest * 0.5).toFixed(2)}))`;
+
+  // Urgence : situations et bons gestes, une photo par situation
+  if (has(D.urgences)) {
+    const list = document.getElementById('choices'), body = document.getElementById('g-body'), gimg = document.getElementById('g-img');
+    D.urgences.forEach((u, k) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<button type="button" aria-pressed="${k === 0}"><span class="ico">${ico(u.icone, 18)}</span>${esc(u.titre)}</button>`;
+      li.firstChild.addEventListener('click', () => show(k, true));
+      list.append(li);
+    });
+    function show(k, anim) {
+      const u = D.urgences[k];
+      const fill = () => { body.innerHTML = `<h3>${esc(u.titre)}</h3><ol>${u.gestes.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>`;
+        if (u.photo) { gimg.src = u.photo.src; gimg.alt = u.photo.alt || ''; } body.classList.remove('out'); };
+      list.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-pressed', String(j === k)));
+      if (!anim) return fill();
+      body.classList.add('out'); setTimeout(fill, 220);
+    }
+    show(0, false);
+  }
+
+  const legal = document.getElementById('legal');
+  document.getElementById('legal-open').addEventListener('click', () => legal.showModal());
+  document.getElementById('legal-close').addEventListener('click', () => legal.close());
+  const bar = document.querySelector('.callbar');
+  new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(document.querySelector('.hero'));
+
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still || !window.gsap) return;
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('.hero h1 .l > span', { yPercent: 110, duration: 1.1, ease: 'power4.out', stagger: .12, delay: .15 });
+  gsap.from('[data-hero]', { y: 24, opacity: 0, duration: .9, ease: 'power3.out', stagger: .1, delay: .45 });
+  gsap.from('.nav', { y: -30, opacity: 0, duration: .8, ease: 'power3.out', delay: .1 });
+  gsap.from('.hero .bg img', { scale: 1.12, duration: 2.2, ease: 'power2.out' });
+  gsap.to('.hero .bg', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  document.querySelectorAll('[data-words]').forEach((el) => {
+    el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => `<span class="w">${esc(w)}</span>`).join(' ');
+    gsap.to(el.querySelectorAll('.w'), { color: getComputedStyle(el).color, stagger: .1, ease: 'none',
+      scrollTrigger: { trigger: el, start: 'top 82%', end: 'bottom 45%', scrub: true } });
+  });
+  const stackFx = (sel) => {
+    const cards = gsap.utils.toArray(sel);
+    cards.forEach((c, i) => { if (i < cards.length - 1) gsap.to(c, { scale: .95, ease: 'none', scrollTrigger: { trigger: cards[i + 1], start: 'top 85%', end: 'top 25%', scrub: true } }); });
+  };
+  gsap.matchMedia().add('(min-width: 981px)', () => { stackFx('.scard'); stackFx('.svc-card'); });
+  document.querySelectorAll('[data-par]').forEach((im) => {
+    gsap.fromTo(im, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: im.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+  gsap.utils.toArray('.why .left > *, .urg .left > *, .zone .left > *, .faq .left > *, .qa details, .chips span, .cta > *, .feature .in > *').forEach((el) => {
+    gsap.from(el, { y: 28, opacity: 0, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%' } });
+  });
+})();
+</script>
+</body>
+</html>
