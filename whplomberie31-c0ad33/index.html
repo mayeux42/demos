@@ -477,15 +477,16 @@ dialog.legal button { margin-top: 18px; }
 })();
 </script>
 <script>
-// Visites : GoatCounter, sans cookie (une adresse par artisan). Évènement « lu-<dossier> » quand la page est parcourue.
+// Visites : GoatCounter, sans cookie (une adresse par artisan). Trois niveaux : ouverte (la visite elle-même),
+// « defile-<dossier> » quand il passe le premier écran, « lu-<dossier> » quand il atteint 60 % de la page (les avis).
 (() => {
   const slug = location.pathname.split('/').filter((p) => p && p !== 'index.html')[0] || '';
-  let done = false;
+  const sent = {};
+  const send = (name, title) => { if (sent[name]) return; sent[name] = true; window.goatcounter.count({ path: name + '-' + slug, title, event: true }); };
   const check = () => {
-    if (done || !slug || !window.goatcounter || !window.goatcounter.count) return;
-    if (scrollY + innerHeight >= document.documentElement.scrollHeight * .6) {
-      done = true; window.goatcounter.count({ path: 'lu-' + slug, title: 'Maquette parcourue', event: true });
-    }
+    if (!slug || !window.goatcounter || !window.goatcounter.count) return;
+    if (scrollY >= innerHeight * .8) send('defile', 'Maquette : a défilé');
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight * .6) send('lu', 'Maquette parcourue');
   };
   addEventListener('scroll', check, { passive: true });
 })();
