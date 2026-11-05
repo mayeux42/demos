@@ -476,5 +476,20 @@ dialog.legal button { margin-top: 18px; }
   });
 })();
 </script>
+<script>
+// Visites : GoatCounter, sans cookie (une adresse par artisan). Évènement « lu-<dossier> » quand la page est parcourue.
+(() => {
+  const slug = location.pathname.split('/').filter((p) => p && p !== 'index.html')[0] || '';
+  let done = false;
+  const check = () => {
+    if (done || !slug || !window.goatcounter || !window.goatcounter.count) return;
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight * .6) {
+      done = true; window.goatcounter.count({ path: 'lu-' + slug, title: 'Maquette parcourue', event: true });
+    }
+  };
+  addEventListener('scroll', check, { passive: true });
+})();
+</script>
+<script data-goatcounter="https://mdwagency.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
