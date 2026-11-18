@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Avenir Plomberie 974 · Plombier à Saint-Leu, La Réunion</title>
+<meta name="description" content="Plombier à Saint-Leu : installation sanitaire, dépannage, traitement de l'eau, recherche de fuite sans casse et chauffe-eau dans l'Ouest de La Réunion.">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root {
+  --navy: #182944; --navy-2: #213659; --navy-3: #2d4670; --navy-4: #3d5a88;
+  --cream: #f5f3ec; --sand: #ece9df; --mist: #d9dfe8; --white: #ffffff;
+  --sun: #ffc228; --sun-2: #f5b400; --orange: #ef7d22; --sky: #6aa7d8;
+  --ink: #101b2d; --soft: #4d5a6c; --line: rgba(16, 27, 45, .09);
+  --r-s: 12px; --r-m: 20px; --r-l: 32px;
+  --m: clamp(16px, 3.4vw, 48px);
+  --sec: clamp(80px, 9vw, 140px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 96px; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: Switzer, system-ui, sans-serif; font-size: 17px; line-height: 1.6; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4 { margin: 0; font-weight: 500; letter-spacing: -0.035em; line-height: 1.05; text-wrap: balance; }
+h2 { font-size: clamp(2.1rem, 1.3rem + 2.9vw, 3.7rem); }
+h3 { font-size: clamp(1.3rem, 1.1rem + .7vw, 1.65rem); letter-spacing: -0.02em; line-height: 1.18; }
+p { margin: 0; text-wrap: pretty; }
+ul { margin: 0; padding: 0; list-style: none; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1320px; margin-inline: auto; padding-inline: var(--m); }
+.muted { color: var(--soft); }
+.tag { display: inline-flex; align-items: center; gap: 10px; padding: 5px 14px 5px 6px; border-radius: 999px; background: var(--white); color: var(--ink); font-size: 13px; font-weight: 500; line-height: 1.4; }
+.tag b { background: var(--sun); padding: 3px 10px; border-radius: 999px; font-weight: 600; }
+.tag.dark { background: rgba(255,255,255,.08); color: var(--cream); box-shadow: inset 0 0 0 1px rgba(255,255,255,.14); }
+.tag.dot { padding-left: 14px; }
+.tag.dot::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--sun); }
+.head { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: clamp(36px, 5vw, 64px); }
+.head.center { align-items: center; text-align: center; max-width: 860px; margin-inline: auto; }
+.head p { color: var(--soft); max-width: 56ch; font-size: 18px; }
+.head.split { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 48px; }
+.head.split > div { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+
+/* Boutons */
+.btn { display: inline-flex; align-items: center; gap: 14px; padding: 8px 8px 8px 22px; border-radius: 14px; font-weight: 500; white-space: nowrap; border: 0; cursor: pointer; font: inherit; font-weight: 500;
+  background: var(--sun); color: var(--ink); transition: background-color .25s, transform .25s var(--ease), box-shadow .25s; }
+.btn i { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--ink); color: var(--sun); overflow: hidden; flex: none; }
+.btn i svg { transition: transform .35s var(--ease); }
+.btn:hover { background: var(--sun-2); }
+.btn:hover i svg { transform: translateX(3px) rotate(-45deg); }
+.btn.light { background: var(--white); }
+.btn.light i { background: var(--sun); color: var(--ink); }
+.btn.light:hover { background: var(--cream); }
+.btn.dark { background: var(--navy); color: var(--cream); }
+.btn.dark i { background: var(--sun); color: var(--ink); }
+.btn.dark:hover { background: var(--navy-2); }
+.btn.ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 1px rgba(245,243,236,.35); padding: 14px 22px; }
+.btn.ghost:hover { background: rgba(245,243,236,.08); }
+.btn.ghost.ink { color: var(--ink); box-shadow: inset 0 0 0 1px rgba(16,27,45,.22); }
+.btn.ghost.ink:hover { background: rgba(16,27,45,.05); }
+.link { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; }
+.link svg { transition: transform .3s var(--ease); }
+.link:hover svg { transform: translateX(4px); }
+
+/* Menu flottant */
+.nav { position: fixed; z-index: 60; top: 16px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 22px;
+  background: rgba(245,243,236,.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 7px 7px 7px 10px; border-radius: 18px; box-shadow: 0 10px 30px rgba(10, 20, 40, .14); width: max-content; max-width: calc(100% - 24px); }
+.nav .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 16px; letter-spacing: -0.02em; line-height: 1.05; }
+.nav .logo img { width: 40px; height: 40px; border-radius: 11px; object-fit: cover; }
+.nav .logo small { display: block; font-weight: 500; font-size: 12px; color: var(--soft); letter-spacing: 0; }
+.nav .links { display: flex; gap: 4px; font-size: 15px; }
+.nav .links a { padding: 8px 12px; border-radius: 10px; transition: background-color .25s; }
+.nav .links a:hover { background: rgba(16,27,45,.06); }
+.nav .links a[aria-current="page"] { background: var(--navy); color: var(--cream); }
+.nav .btn { padding: 6px 6px 6px 16px; font-size: 15px; }
+.nav .btn i { width: 32px; height: 32px; }
+.burger { display: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: var(--navy); color: var(--cream); place-items: center; cursor: pointer; }
+.mmenu { position: fixed; z-index: 55; inset: 0; background: var(--navy); color: var(--cream); padding: 100px var(--m) 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px;
+  clip-path: inset(0 0 100% 0); transition: clip-path .5s var(--ease); visibility: hidden; overflow-y: auto; }
+.mmenu.open { clip-path: inset(0 0 0 0); visibility: visible; }
+.mmenu ul { display: grid; gap: 2px; }
+.mmenu ul a { display: flex; justify-content: space-between; align-items: center; font-size: clamp(1.6rem, 6vw, 2.2rem); letter-spacing: -0.03em; padding: 10px 0; border-bottom: 1px solid rgba(245,243,236,.1); }
+.mmenu ul a[aria-current="page"] { color: var(--sun); }
+.mmenu .meta { display: grid; gap: 14px; font-size: 15px; color: rgba(245,243,236,.75); }
+.mmenu .btn { justify-content: space-between; }
+
+/* Bandeau titre des pages intérieures */
+.phero { background: var(--navy); color: var(--cream); border-radius: 0 0 var(--r-l) var(--r-l); padding: clamp(120px, 14vw, 170px) 0 clamp(56px, 7vw, 96px); position: relative; overflow: hidden; }
+.phero::before { content: ""; position: absolute; width: 760px; height: 760px; right: -220px; top: -320px; border-radius: 50%; background: radial-gradient(circle, rgba(106,167,216,.22), rgba(106,167,216,0) 65%); pointer-events: none; }
+.phero .grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 88px); align-items: center; position: relative; }
+.crumbs { display: flex; gap: 10px; font-size: 14px; color: rgba(245,243,236,.6); margin-bottom: 22px; }
+.crumbs a:hover { color: var(--cream); }
+.phero h1 { font-size: clamp(2.6rem, 1.4rem + 4.4vw, 5.2rem); line-height: 1; letter-spacing: -0.045em; margin: 18px 0 22px; }
+.phero h1 em { font-style: normal; color: var(--sun); }
+.phero .lede { font-size: 18px; color: rgba(245,243,236,.82); max-width: 52ch; }
+.phero .acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.phero .side { border-radius: var(--r-m); overflow: hidden; position: relative; background: var(--navy-2); }
+.phero .side img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.phero .side figcaption { position: absolute; left: 12px; bottom: 12px; right: 12px; }
+.phero .jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
+.phero .jump a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 10px; border-radius: 999px; background: rgba(255,255,255,.07); box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); font-size: 14px; transition: background-color .25s; }
+.phero .jump a:hover { background: rgba(255,255,255,.14); }
+.phero .jump a svg { color: var(--sun); }
+
+/* Sections */
+.sec { padding: var(--sec) 0; }
+.sec.tight { padding-top: 0; }
+.band { background: var(--white); border-radius: var(--r-l); margin-inline: clamp(0px, 1vw, 16px); }
+.band.mist { background: var(--mist); }
+.band.sand { background: var(--sand); }
+.band.navy { background: var(--navy); color: var(--cream); }
+.band.navy .head p, .band.navy .muted { color: rgba(245,243,236,.72); }
+.ico { width: 48px; height: 48px; border-radius: 14px; background: var(--sun); display: grid; place-items: center; color: var(--ink); flex: none; }
+.ico.navy { background: var(--navy); color: var(--sun); }
+.ico.soft { background: var(--mist); color: var(--navy); }
+.checks { display: grid; gap: 9px; }
+.checks li { display: flex; gap: 11px; }
+.checks li::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 3px; border-radius: 6px; background: var(--sun) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23101b2d' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center / 12px no-repeat; }
+
+/* Carte simple */
+.card { background: var(--white); border-radius: var(--r-m); padding: clamp(24px, 2.6vw, 34px); display: flex; flex-direction: column; gap: 16px; box-shadow: 0 1px 0 var(--line), 0 24px 48px -36px rgba(16,27,45,.35); }
+.card p { color: var(--soft); }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+
+/* Questions */
+.faq .grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.faq .left { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; position: sticky; top: 120px; }
+.faq .left p { color: var(--soft); max-width: 40ch; }
+.qa { display: grid; gap: 12px; }
+.qa details { background: var(--white); border-radius: 16px; padding: 4px 8px 4px 22px; transition: box-shadow .3s; }
+.qa details[open] { box-shadow: 0 24px 48px -36px rgba(16,27,45,.4); }
+.qa summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; cursor: pointer; font-weight: 500; font-size: 17px; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary i { flex: none; width: 34px; height: 34px; border-radius: 10px; background: var(--navy); color: var(--sun); display: grid; place-items: center; transition: transform .3s var(--ease), background-color .3s; }
+.qa summary i svg { transition: transform .3s var(--ease); }
+.qa details[open] summary i { background: var(--sun); color: var(--ink); }
+.qa details[open] summary i svg { transform: rotate(45deg); }
+.qa details > div { color: var(--soft); padding: 0 50px 20px 0; display: grid; gap: 10px; }
+.qa details > div a { color: var(--ink); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Appel à l'action */
+.cta { margin: 0 clamp(8px, 1vw, 16px); background: var(--navy); color: var(--cream); border-radius: var(--r-l); padding: clamp(64px, 8vw, 120px) var(--m); text-align: center; position: relative; overflow: hidden; isolation: isolate; }
+.cta::before { content: ""; position: absolute; z-index: -1; width: 900px; height: 900px; left: 50%; top: 40%; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, rgba(255,194,40,.16), rgba(255,194,40,0) 60%); }
+.cta h2 { font-size: clamp(2.3rem, 1.2rem + 4.2vw, 5rem); max-width: 15ch; margin: 22px auto 0; }
+.cta h2 em { font-style: normal; color: var(--sun); }
+.cta p { color: rgba(245,243,236,.78); max-width: 52ch; margin: 22px auto 34px; }
+.cta .acts { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.cta .info { font-size: 15px; margin: 26px auto 0; color: rgba(245,243,236,.66); }
+
+/* Pied de page */
+.foot { padding: 80px 0 36px; }
+.foot .top { display: grid; grid-template-columns: 1.3fr repeat(3, minmax(0, 1fr)); gap: 36px; }
+.foot .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 20px; letter-spacing: -0.03em; line-height: 1.1; }
+.foot .brand img { width: 56px; height: 56px; border-radius: 14px; object-fit: cover; }
+.foot .brand small { display: block; font-size: 13px; font-weight: 500; color: var(--soft); letter-spacing: 0; }
+.foot .blurb { color: var(--soft); margin-top: 16px; max-width: 36ch; font-size: 15px; }
+.foot .social { display: flex; gap: 8px; margin-top: 18px; }
+.foot .social a { width: 40px; height: 40px; border-radius: 12px; background: var(--white); display: grid; place-items: center; transition: background-color .25s; }
+.foot .social a:hover { background: var(--sun); }
+.foot h4 { margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0; }
+.foot ul { display: grid; gap: 9px; color: var(--soft); font-size: 15px; }
+.foot ul a:hover { color: var(--ink); }
+.foot .bottom { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; font-size: 13px; color: var(--soft); }
+.legal-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+dialog.legal { border: 0; border-radius: var(--r-m); padding: 28px 30px; max-width: 520px; width: calc(100% - 32px); color: var(--ink); font-size: 15px; }
+dialog.legal::backdrop { background: rgba(10, 20, 40, .55); }
+dialog.legal h3 { margin-bottom: 14px; }
+dialog.legal p { margin: 4px 0; }
+dialog.legal .btn { margin-top: 18px; }
+
+/* Visionneuse de photos */
+dialog.lb { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; margin: 0; }
+dialog.lb::backdrop { background: rgba(8, 14, 26, .92); }
+dialog.lb .in { width: 100%; height: 100%; display: grid; grid-template-rows: 1fr auto; place-items: center; padding: 64px 72px 24px; gap: 16px; }
+dialog.lb img { max-width: 100%; max-height: calc(100vh - 150px); width: auto; height: auto; border-radius: 14px; object-fit: contain; }
+dialog.lb p { color: var(--cream); font-size: 15px; text-align: center; }
+dialog.lb button { position: absolute; width: 48px; height: 48px; border-radius: 14px; border: 0; background: rgba(255,255,255,.1); color: var(--cream); display: grid; place-items: center; cursor: pointer; transition: background-color .25s; }
+dialog.lb button:hover { background: var(--sun); color: var(--ink); }
+dialog.lb .x { top: 14px; right: 14px; }
+dialog.lb .pv { left: 14px; top: 50%; transform: translateY(-50%); }
+dialog.lb .nx { right: 14px; top: 50%; transform: translateY(-50%); }
+
+/* Barre d'appel sur téléphone */
+.callbar { display: none; }
+
+/* Apparitions au défilement (seulement si JS) */
+.js .rv { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+.js .rv.in { opacity: 1; transform: none; }
+.js .rv-img { clip-path: inset(8% 8% 8% 8% round 24px); transition: clip-path 1.1s var(--ease); }
+.js .rv-img.in { clip-path: inset(0 0 0 0 round 0px); }
+
+@media (max-width: 1100px) {
+  .nav .links { display: none; }
+  .burger { display: grid; }
+  .nav .call-txt { display: none; }
+}
+@media (max-width: 980px) {
+  .phero .grid, .faq .grid { grid-template-columns: minmax(0, 1fr); }
+  .faq .left { position: static; }
+  .grid3, .grid4 { grid-template-columns: 1fr 1fr; }
+  .foot .top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .nav { top: 10px; gap: 10px; width: calc(100% - 20px); justify-content: space-between; }
+  .nav .logo small { display: none; }
+  .nav > .btn { display: none; }
+  .grid2, .grid3, .grid4 { grid-template-columns: minmax(0, 1fr); }
+  .head p { font-size: 16px; }
+  .phero .lede { font-size: 16px; }
+  .phero .acts .btn, .cta .acts .btn { flex: 1 1 100%; justify-content: space-between; }
+  .qa details > div { padding-right: 8px; }
+  .foot .top { grid-template-columns: minmax(0, 1fr); }
+  .foot { padding-bottom: 110px; }
+  .btn { white-space: normal; }
+  .callbar { display: block; position: fixed; z-index: 40; left: 10px; right: 10px; bottom: 10px; transform: translateY(150%); transition: transform .35s var(--ease); }
+  .callbar.show { transform: none; }
+  .callbar .btn { width: 100%; justify-content: space-between; box-shadow: 0 10px 30px rgba(10,20,40,.35); }
+  dialog.lb .in { padding: 70px 12px 24px; }
+  dialog.lb .pv, dialog.lb .nx { top: auto; bottom: 14px; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: .01ms !important; animation: none !important; }
+  .js .rv { opacity: 1; transform: none; }
+  .js .rv-img { clip-path: none; }
+}
+
+/* Premier écran */
+.hero { background: var(--navy); color: var(--cream); padding: 118px 0 clamp(40px, 5vw, 64px); min-height: 100svh; display: flex; align-items: center; position: relative; overflow: hidden; border-radius: 0 0 var(--r-l) var(--r-l); }
+.hero::before { content: ""; position: absolute; width: 900px; height: 900px; left: -380px; bottom: -520px; border-radius: 50%; background: radial-gradient(circle, rgba(106,167,216,.16), rgba(106,167,216,0) 62%); pointer-events: none; }
+.hero .grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(32px, 5vw, 72px); align-items: center; width: 100%; position: relative; }
+.hero .copy { display: flex; flex-direction: column; align-items: flex-start; gap: 26px; }
+.hero h1 { font-size: clamp(2.9rem, 1.2rem + 5vw, 5.9rem); line-height: .98; letter-spacing: -0.05em; }
+.hero h1 .l { display: block; overflow: hidden; padding-bottom: .07em; }
+.hero h1 .l > span { display: inline-block; }
+.hero h1 em { font-style: normal; color: var(--sun); }
+.hero .lede { font-size: 18px; max-width: 50ch; color: rgba(245,243,236,.8); }
+.hero .acts { display: flex; flex-wrap: wrap; gap: 12px; }
+.proof { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; padding-top: 8px; }
+.proof .g { display: flex; align-items: center; gap: 12px; }
+.proof .g b { font-size: 40px; font-weight: 500; letter-spacing: -0.04em; line-height: 1; }
+.proof .g > span, .proof .h > span { display: flex; flex-direction: column; line-height: 1.3; font-size: 15px; }
+.proof small { color: rgba(245,243,236,.65); font-size: 13.5px; }
+.proof .h { display: flex; align-items: center; gap: 10px; }
+.proof .h svg { color: var(--sun); }
+.proof .sep { width: 1px; height: 38px; background: rgba(245,243,236,.18); }
+.stars { color: #fbbc05; letter-spacing: 2px; font-size: 14px; }
+.show { position: relative; height: min(calc(100svh - 170px), 720px); min-height: 460px; border-radius: var(--r-l); overflow: hidden; background: var(--navy-2); }
+.show .sl { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1.2s ease; }
+.show .sl.on { opacity: 1; }
+.show .sl img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); transition: transform 7s linear; }
+.show .sl.on img { transform: scale(1); }
+.show::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,20,40,.55), rgba(10,20,40,0) 38%); pointer-events: none; }
+.show-bar { position: absolute; z-index: 2; left: 14px; right: 14px; bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.show-bar .tag { max-width: 78%; padding-right: 16px; }
+.show-bar .tag { border-radius: 14px; align-items: flex-start; line-height: 1.35; padding-top: 6px; padding-bottom: 6px; }
+.show-bar .tag b { flex: none; }
+.show-bar .tag > span { padding-top: 3px; }
+.dots { display: flex; gap: 6px; padding-bottom: 10px; }
+.dots button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 999px; background: rgba(255,255,255,.5); cursor: pointer; transition: width .35s var(--ease), background-color .35s; }
+.dots button[aria-current="true"] { width: 26px; background: var(--sun); }
+
+/* Bandeau défilant */
+.marquee { overflow: hidden; padding: 26px 0; }
+.marquee .track { display: flex; width: max-content; animation: slide 40s linear infinite; }
+.marquee span { font-size: clamp(20px, 2vw, 26px); letter-spacing: -0.02em; padding-right: 40px; white-space: nowrap; display: inline-flex; align-items: center; gap: 40px; color: var(--navy); }
+.marquee span::after { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--orange); }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* Présentation */
+.about { padding-top: clamp(40px, 5vw, 72px); padding-bottom: clamp(48px, 5vw, 80px); }
+.about .grid { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.about .left { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; position: sticky; top: 120px; }
+.logo-card { margin: 0; background: var(--white); border-radius: var(--r-m); padding: 10px; width: 100%; }
+.logo-card img { width: 100%; border-radius: 14px; aspect-ratio: 1; object-fit: cover; }
+.logo-card figcaption { padding: 14px 8px 6px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; }
+.logo-card small { display: block; color: var(--soft); font-weight: 400; font-size: 14px; letter-spacing: 0; }
+.statement { font-size: clamp(1.6rem, 1rem + 2.1vw, 2.85rem); line-height: 1.18; letter-spacing: -0.03em; font-weight: 500; }
+.statement .w { color: rgba(16,27,45,.18); transition: color .35s; }
+.statement .w.on { color: var(--ink); }
+.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(40px, 5vw, 64px); }
+.pillars > div { background: var(--white); border-radius: var(--r-m); padding: 22px; display: flex; flex-direction: column; gap: 6px; }
+.pillars svg { color: var(--orange); margin-bottom: 10px; }
+.pillars b { font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+.pillars span { color: var(--soft); font-size: 15px; }
+
+/* Prestations : grille bento */
+.bento { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+.b { border-radius: var(--r-m); background: var(--white); overflow: hidden; position: relative; display: flex; flex-direction: column; gap: 14px; }
+.b h3 { margin-top: 4px; }
+.b p { color: var(--soft); }
+.b-sani { grid-column: span 4; flex-direction: row; gap: 0; }
+.b-sani, .b-dep { min-height: 420px; }
+.b-sani .im { flex: 0 0 46%; position: relative; }
+.b-sani .im img { position: absolute; inset: 0; }
+.b-sani .im img { width: 100%; height: 100%; object-fit: cover; }
+.b-sani .tx { padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; align-items: flex-start; gap: 14px; justify-content: flex-end; }
+.b-dep { grid-column: span 2; background: var(--sun); padding: clamp(24px, 3vw, 34px); justify-content: flex-end; align-items: flex-start; }
+.b-dep .ico { background: var(--ink); color: var(--sun); }
+.b-dep .checks li::before { background-color: var(--white); }
+.b-dep .btn { background: var(--ink); color: var(--cream); margin-top: 10px; }
+.b-dep .btn i { background: var(--sun); color: var(--ink); }
+.b-link { grid-column: span 2; transition: transform .4s var(--ease), box-shadow .4s; }
+.b-link:hover { transform: translateY(-6px); box-shadow: 0 30px 50px -30px rgba(16,27,45,.45); }
+.b-link .im { height: 190px; overflow: hidden; background: var(--mist); }
+.b-link .im img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.b-link:hover .im img { transform: scale(1.06); }
+.b-ce .im img { object-position: 50% 30%; }
+.b-link .tx { padding: 4px clamp(22px, 2.4vw, 30px) clamp(22px, 2.4vw, 30px); display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.b-link .ico { margin-top: -28px; position: relative; box-shadow: 0 0 0 6px var(--white); }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pills li { font-size: 13.5px; padding: 5px 11px; border-radius: 999px; background: var(--cream); }
+.go { margin-top: auto; display: inline-flex; align-items: center; gap: 10px; font-weight: 500; padding-top: 6px; }
+.go svg { transition: transform .35s var(--ease); }
+.b-link:hover .go svg { transform: translateX(5px); }
+
+/* Réalisations */
+.works { padding: var(--sec) 0; }
+.feat { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 12px; }
+.ph { position: relative; display: block; border-radius: var(--r-m); overflow: hidden; background: var(--navy-2); }
+.ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.works .ph:hover img { transform: scale(1.04); }
+.feat .p0 { grid-column: span 8; aspect-ratio: 4 / 3; }
+.feat .p1 { grid-column: span 4; }
+.feat .ph img { position: absolute; inset: 0; }
+.feat .p2, .feat .p3, .feat .p4 { grid-column: span 4; aspect-ratio: 3 / 4; }
+.ph .cap { position: absolute; left: 12px; right: 12px; bottom: 12px; padding: 10px 14px; border-radius: 12px; background: rgba(245,243,236,.94); color: var(--ink); font-size: 14px; line-height: 1.35; font-weight: 500;
+  transform: translateY(8px); opacity: 0; transition: opacity .35s, transform .35s var(--ease); }
+.ph:hover .cap, .ph:focus-visible .cap { opacity: 1; transform: none; }
+.ph .zoom { position: absolute; top: 12px; right: 12px; width: 38px; height: 38px; border-radius: 11px; background: var(--sun); color: var(--ink); display: grid; place-items: center; opacity: 0; transition: opacity .3s; }
+.ph:hover .zoom { opacity: 1; }
+.more { margin-top: 28px; }
+.more summary { list-style: none; display: flex; width: max-content; margin-inline: auto; }
+.more summary::-webkit-details-marker { display: none; }
+.more[open] summary i svg { transform: rotate(-90deg); }
+.more .o, .more[open] .c { display: none; } .more[open] .o { display: inline; }
+.more summary i svg { transform: rotate(90deg); }
+.more-grid { columns: 4 220px; column-gap: 12px; margin-top: 28px; }
+.more-grid .ph { margin-bottom: 12px; break-inside: avoid; }
+.more-grid .ph img { height: auto; }
+
+/* Témoignages */
+.head.split > .gbox { flex-direction: row; }
+.gbox { display: flex; align-items: center; gap: 14px; background: var(--white); border-radius: var(--r-m); padding: 14px 22px; }
+.gbox b { font-size: 44px; font-weight: 500; letter-spacing: -0.04em; line-height: 1; }
+.gbox div { display: flex; flex-direction: column; font-size: 15px; color: var(--soft); }
+.revs { columns: 3 300px; column-gap: 16px; }
+.rev { margin: 0 0 16px; break-inside: avoid; background: var(--white); border-radius: var(--r-m); padding: 26px 26px 22px; display: flex; flex-direction: column; gap: 16px; }
+.rev p { font-size: 17px; line-height: 1.6; }
+.rev footer { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--line); }
+.rev .av { width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--sun); display: grid; place-items: center; font-weight: 600; flex: none; }
+.rev cite { font-style: normal; font-weight: 600; font-size: 15px; display: flex; flex-direction: column; line-height: 1.3; }
+.rev cite span { font-weight: 400; color: var(--soft); font-size: 13.5px; }
+
+/* Zone */
+.zone .grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.zone .left { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+.zone .left p { color: var(--soft); max-width: 44ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips span { padding: 9px 15px; border-radius: 999px; background: var(--white); font-weight: 500; font-size: 15px; }
+.chips span:first-child { background: var(--navy); color: var(--cream); }
+.map { position: relative; background: #cfe2f1; border-radius: var(--r-l); padding: clamp(14px, 2vw, 28px); overflow: hidden;
+  background-image: radial-gradient(rgba(24,41,68,.08) 1px, transparent 1px); background-size: 18px 18px; background-color: #d7e7f3; }
+.island { width: 100%; height: auto; display: block; overflow: hidden; }
+.island .communes path { stroke: #fff; stroke-width: 2; stroke-linejoin: round; transition: fill .6s var(--ease), opacity .6s; }
+.island .o { fill: #eef1ea; }
+.island .w { fill: var(--navy); }
+.island .w:hover { fill: var(--navy-3); }
+.js .map .island .w { fill: #eef1ea; }
+.js .map.in .island .w { fill: var(--navy); transition-delay: .3s; }
+.island .halo { opacity: .9; }
+.island text { font-family: Switzer, system-ui, sans-serif; font-size: 28px; font-weight: 500; letter-spacing: -0.01em; paint-order: stroke; }
+.island .l { fill: #fff; stroke: var(--navy); stroke-width: 5px; }
+.island .l.big { font-size: 40px; font-weight: 600; fill: var(--sun); }
+.island .l.s { fill: var(--navy); stroke: #d7e7f3; stroke-width: 6px; font-size: 26px; }
+.island .l.e { text-anchor: end; fill: var(--navy); stroke: #d7e7f3; stroke-width: 6px; }
+.island .g { fill: #7b8697; stroke: #eef1ea; stroke-width: 5px; font-size: 24px; }
+.island .sea { fill: rgba(24,41,68,.4); font-style: italic; font-size: 30px; stroke: none; }
+.island .pt circle { fill: var(--sun); stroke: var(--navy); stroke-width: 3; }
+.island .hq path { fill: var(--orange); stroke: #fff; stroke-width: 3; }
+.island .pulse { fill: var(--sun); opacity: .5; transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-out infinite; }
+.island .pulse.p2 { animation-delay: 1.2s; }
+@keyframes pulse { from { transform: scale(.6); opacity: .55; } to { transform: scale(4.2); opacity: 0; } }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: var(--soft); margin-top: 10px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.legend i { width: 14px; height: 14px; border-radius: 4px; }
+.legend .lw { background: var(--navy); } .legend .lo { background: #eef1ea; box-shadow: inset 0 0 0 1px rgba(16,27,45,.15); }
+
+/* Contact */
+.contact { padding: 0 clamp(8px, 1vw, 16px); }
+.contact .box { max-width: 1320px; margin-inline: auto; background: var(--navy); color: var(--cream); border-radius: var(--r-l); padding: clamp(28px, 5vw, 72px); display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 72px); position: relative; overflow: hidden; isolation: isolate; }
+.contact .box::before { content: ""; position: absolute; z-index: -1; width: 700px; height: 700px; left: -260px; top: -300px; border-radius: 50%; background: radial-gradient(circle, rgba(106,167,216,.22), rgba(106,167,216,0) 62%); }
+.contact .info { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+.contact h2 em { font-style: normal; color: var(--sun); }
+.contact .info > p { color: rgba(245,243,236,.75); max-width: 40ch; }
+.lines { display: grid; gap: 10px; width: 100%; margin-top: 6px; }
+.lines a, .lines .row { display: flex; align-items: center; gap: 14px; padding: 12px; border-radius: 16px; background: rgba(255,255,255,.05); transition: background-color .25s; font-size: 16.5px; }
+.lines a:hover { background: rgba(255,255,255,.1); }
+.lines .ico { width: 44px; height: 44px; border-radius: 12px; }
+.lines .t { display: flex; flex-direction: column; line-height: 1.35; min-width: 0; }
+.lines small { color: rgba(245,243,236,.6); font-size: 13px; }
+.soc { display: flex; flex-wrap: wrap; gap: 10px; }
+.soc .btn { gap: 10px; padding: 12px 18px; }
+.form { background: var(--cream); color: var(--ink); border-radius: var(--r-m); padding: clamp(22px, 3vw, 36px); display: grid; gap: 16px; align-content: start; }
+.form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form label { display: grid; gap: 7px; font-size: 14px; font-weight: 500; }
+.form input:not([type="radio"]), .form textarea { width: 100%; font: inherit; font-size: 16px; padding: 13px 15px; border-radius: 12px; border: 1px solid rgba(16,27,45,.14); background: var(--white); color: var(--ink); transition: border-color .2s, box-shadow .2s; }
+.form input:focus, .form textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 4px rgba(255,194,40,.45); }
+.form textarea { resize: vertical; min-height: 120px; }
+.form fieldset { border: 0; padding: 0; margin: 0; }
+.form legend { font-size: 14px; font-weight: 500; margin-bottom: 8px; padding: 0; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts label { display: block; cursor: pointer; }
+.opts input { position: absolute; opacity: 0; pointer-events: none; }
+.opts span { display: inline-block; padding: 9px 15px; border-radius: 999px; background: var(--white); border: 1px solid rgba(16,27,45,.12); font-size: 15px; font-weight: 500; transition: background-color .2s, border-color .2s; }
+.opts input:checked + span { background: var(--navy); color: var(--cream); border-color: var(--navy); }
+.opts input:focus-visible + span { outline: 3px solid var(--sun); outline-offset: 2px; }
+.form .btn { justify-self: start; margin-top: 4px; }
+.form .ok { background: var(--white); border-radius: 12px; padding: 12px 16px; font-size: 15px; border-left: 4px solid var(--sun); }
+.form .err { border-color: #c2410c !important; }
+
+.js .hero h1 .l > span { transform: translateY(105%); transition: transform 1.1s cubic-bezier(.2,.8,.2,1); }
+.js .hero h1 .l:nth-child(2) > span { transition-delay: .1s; } .js .hero h1 .l:nth-child(3) > span { transition-delay: .2s; }
+.js .hero-in { opacity: 0; transform: translateY(22px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js body.ready .hero h1 .l > span { transform: none; }
+.js body.ready .hero-in { opacity: 1; transform: none; }
+.js body.ready .hero .copy > .hero-in:nth-child(3) { transition-delay: .35s; } .js body.ready .hero .copy > .hero-in:nth-child(4) { transition-delay: .45s; }
+.js body.ready .hero .copy > .hero-in:nth-child(5) { transition-delay: .55s; } .js body.ready .show.hero-in { transition-delay: .25s; }
+
+@media (max-width: 1100px) {
+  .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .b-sani { grid-column: span 2; } .b-dep { grid-column: span 2; } .b-link { grid-column: span 1; }
+  .b-ce { grid-column: span 2; }
+}
+@media (max-width: 980px) {
+  .hero { min-height: 0; }
+  .hero .grid, .about .grid, .zone .grid, .contact .box { grid-template-columns: minmax(0, 1fr); }
+  .show { height: auto; aspect-ratio: 4 / 4.4; min-height: 0; }
+  .about .left { position: static; flex-direction: row; align-items: center; }
+  .logo-card { display: flex; align-items: center; gap: 12px; width: auto; padding: 8px 18px 8px 8px; }
+  .logo-card img { width: 64px; }
+  .logo-card figcaption { padding: 0; }
+  .about .left .tag { display: none; }
+  .feat .p0 { grid-column: span 12; }
+  .feat .p1, .feat .p2, .feat .p3, .feat .p4 { grid-column: span 6; aspect-ratio: 3 / 4; }
+  .ph .cap { opacity: 1; transform: none; font-size: 13px; padding: 8px 12px; }
+}
+@media (max-width: 640px) {
+  .hero { padding-top: 96px; }
+  .hero .lede { font-size: 16px; }
+  .hero .acts { width: 100%; } .hero .acts .btn { flex: 1 1 100%; justify-content: space-between; }
+  .proof .sep { display: none; }
+  .show-bar .tag { max-width: 100%; } .dots { display: none; }
+  .pillars { grid-template-columns: minmax(0, 1fr); }
+  .b-sani, .b-dep { min-height: 0; } .b-dep { padding-top: 28px; }
+  .bento { grid-template-columns: minmax(0, 1fr); }
+  .b-sani, .b-dep, .b-link, .b-ce { grid-column: span 1; }
+  .b-sani { flex-direction: column; } .b-sani .im { flex: none; height: 260px; }
+  .feat .p1, .feat .p2, .feat .p3, .feat .p4 { grid-column: span 12; aspect-ratio: 4 / 5; }
+  .feat .p0 { aspect-ratio: 4 / 3.6; }
+  .more-grid { columns: 2; column-gap: 8px; } .more-grid .ph { margin-bottom: 8px; } .more-grid .cap { display: none; }
+  .revs { columns: auto; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: calc(-1 * var(--m)); padding: 0 var(--m) 8px; scrollbar-width: none; }
+  .revs::-webkit-scrollbar { display: none; }
+  .rev { flex: 0 0 86%; margin: 0; scroll-snap-align: center; }
+  .js .revs .rev.rv { opacity: 1; transform: none; }
+  .revs-hint { display: block !important; }
+  .gbox { padding: 12px 18px; }
+  .form .two { grid-template-columns: minmax(0, 1fr); }
+  .form .btn { justify-self: stretch; justify-content: space-between; }
+  .island text { font-size: 26px; }
+  .map::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 70px; background: linear-gradient(90deg, rgba(215,231,243,0), #d7e7f3 85%); pointer-events: none; } .island .l.big { font-size: 34px; } .island .g { display: none; }
+}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Menu principal">
+  <a class="logo" href="index.html"><img src="img/logo.jpg" alt="" width="40" height="40"><span>Avenir Plomberie<small>Saint-Leu · La Réunion</small></span></a>
+  <div class="links"><a href="index.html" aria-current="page">Accueil</a><a href="traitement-eau.html">Traitement de l'eau</a><a href="recherche-de-fuite.html">Recherche de fuite</a><a href="chauffe-eau.html">Chauffe-eau</a><a href="index.html#realisations">Réalisations</a><a href="index.html#contact">Contact</a></div>
+  <a class="btn " href="tel:+262693770908"><span class="call-txt">Appeler</span> <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+  <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mmenu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+</nav>
+<div class="mmenu" id="mmenu" aria-label="Menu">
+  <ul><li><a href="index.html" aria-current="page">Accueil<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="traitement-eau.html">Traitement de l'eau<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="recherche-de-fuite.html">Recherche de fuite<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="chauffe-eau.html">Chauffe-eau<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="index.html#realisations">Réalisations<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="index.html#contact">Contact<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li></ul>
+  <div class="meta"><a class="btn " href="tel:+262693770908">Appeler le 0693 77 09 08 <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a><span>Lun.–ven. 7&nbsp;h–19&nbsp;h · sam. 8&nbsp;h–12&nbsp;h</span><span>avenirplomberie974@gmail.com</span></div>
+</div>
+<main>
+
+<header class="hero" id="top"><div class="wrap grid">
+  <div class="copy">
+    <span class="tag dark hero-in"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg> Saint-Leu · Ouest de La Réunion</span>
+    <h1><span class="l"><span>Votre plombier</span></span><span class="l"><span>de confiance</span></span><span class="l"><span>à <em>Saint-Leu</em></span></span></h1>
+    <p class="lede hero-in">Installation sanitaire, dépannage, traitement de l'eau, recherche de fuite sans casse et chauffe-eau&nbsp;: des solutions durables et efficaces pour toute la plomberie de la maison.</p>
+    <div class="acts hero-in"><a class="btn " href="tel:+262693770908">Appeler le 0693 77 09 08 <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a><a class="btn ghost" href="#contact">Devis gratuit <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></div>
+    <div class="proof hero-in">
+      <a class="g" href="#temoignages"><b>5,0</b><span><span class="stars">★★★★★</span><small>22 avis Google</small></span></a>
+      <span class="sep" aria-hidden="true"></span>
+      <span class="h"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lun.–ven. 7&nbsp;h–19&nbsp;h<small>Samedi 8&nbsp;h–12&nbsp;h</small></span></span>
+    </div>
+  </div>
+  <div class="show hero-in" aria-roledescription="carrousel" aria-label="Nos réalisations">
+    <figure class="sl on"><img src="img/sdb-baignoire-ilot-jardin.jpg" alt="Baignoire îlot, frise terracotta et double vasque, avec vue sur le jardin" width="1920" height="1440"></figure><figure class="sl"><img src="img/sdb-mosaique-noire.jpg" alt="Mosaïque noire pailletée, miroir rétroéclairé et double vasque blanche" width="900" height="1600" loading="lazy"></figure><figure class="sl"><img src="img/sdb-double-vasque-bois.jpg" alt="Double vasque à tiroirs effet bois, miroir et suspensions lumineuses" width="1200" height="1600" loading="lazy"></figure><figure class="sl"><img src="img/sdb-baignoire-verriere.jpg" alt="Baignoire et douche, porte verrière noire, carrelage effet marbre" width="1200" height="1600" loading="lazy"></figure><figure class="sl"><img src="img/sdb-douche-bois-pierre.jpg" alt="Douche en carrelage effet bois et pierre grise, meuble gris et miroir rond" width="1200" height="1600" loading="lazy"></figure>
+    <div class="show-bar"><span class="tag"><b>Réalisation</b> <span id="sl-cap">Baignoire îlot, frise terracotta et double vasque, avec vue sur le jardin</span></span><div class="dots"><button type="button" aria-label="Photo 1" aria-current="true"></button><button type="button" aria-label="Photo 2"></button><button type="button" aria-label="Photo 3"></button><button type="button" aria-label="Photo 4"></button><button type="button" aria-label="Photo 5"></button></div></div>
+  </div>
+</div></header>
+
+<div class="marquee" aria-label="Communes desservies"><div class="track"><span>Saint-Leu</span><span>Saint-Paul</span><span>Les Trois-Bassins</span><span>La Saline-les-Bains</span><span>L'Étang-Salé</span><span>Le Port</span><span>Saint-Leu</span><span>Saint-Paul</span><span>Les Trois-Bassins</span><span>La Saline-les-Bains</span><span>L'Étang-Salé</span><span>Le Port</span><span aria-hidden="true">Saint-Leu</span><span aria-hidden="true">Saint-Paul</span><span aria-hidden="true">Les Trois-Bassins</span><span aria-hidden="true">La Saline-les-Bains</span><span aria-hidden="true">L'Étang-Salé</span><span aria-hidden="true">Le Port</span><span aria-hidden="true">Saint-Leu</span><span aria-hidden="true">Saint-Paul</span><span aria-hidden="true">Les Trois-Bassins</span><span aria-hidden="true">La Saline-les-Bains</span><span aria-hidden="true">L'Étang-Salé</span><span aria-hidden="true">Le Port</span></div></div>
+
+<section class="about sec" id="presentation"><div class="wrap grid">
+  <div class="left">
+    <span class="tag rv">Qui sommes-nous&nbsp;?</span>
+    <figure class="logo-card rv"><img src="img/logo.jpg" alt="Logo Avenir Plomberie 974" width="400" height="400" loading="lazy"><figcaption>Avenir Plomberie 974<small>63 B chemin Boussole, Saint-Leu</small></figcaption></figure>
+  </div>
+  <div>
+    <p class="statement" data-words>Une entreprise de plomberie basée à Saint&#8209;Leu, fondée sur la qualité, l'intégrité et la confiance, avec des plombiers qualifiés et expérimentés, dédiés à dépasser vos attentes à chaque projet.</p>
+    <div class="pillars">
+      <div class="rv"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><b>Qualité</b><span>Des installations durables, conformes aux normes.</span></div>
+      <div class="rv" style="--d:.08s"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 3.1a4 4 0 0 1 0 7.8M22 21a7 7 0 0 0-5-6.7"/></svg><b>Écoute</b><span>Des conseils clairs, adaptés à votre budget.</span></div>
+      <div class="rv" style="--d:.16s"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><b>Climat tropical</b><span>Des équipements choisis pour La Réunion.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="services"><div class="wrap">
+  <div class="head split"><div><span class="tag rv">Nos prestations</span><h2 class="rv">Toute la plomberie<br>de la maison.</h2></div>
+    <p class="muted rv" style="max-width:46ch">Du dépannage d'une fuite à la salle de bain complète, en neuf comme en rénovation. Trois spécialités ont leur page dédiée.</p></div>
+  <div class="bento">
+    <article class="b b-sani rv">
+      <div class="im"><img src="img/sdb-double-vasque-bois.jpg" alt="Salle de bain avec double vasque réalisée par Avenir Plomberie" width="1200" height="1600" loading="lazy"></div>
+      <div class="tx"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M6 12V5.5A2.5 2.5 0 0 1 8.5 3 2.5 2.5 0 0 1 11 5.5"/><path d="M7 19l-1 2M17 19l1 2"/></svg></span><h3>Installation sanitaire</h3>
+        <p>Une installation de qualité, durable et conforme aux normes, pour vos salles de bain neuves ou rénovées.</p>
+        <a class="link" href="#realisations">Voir nos réalisations <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </article>
+    <article class="b b-dep rv" style="--d:.06s">
+      <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><h3>Dépannage</h3>
+      <ul class="checks"><li>Réparation rapide de fuites</li><li>Débouchage efficace de canalisations</li></ul>
+      <a class="btn " href="tel:+262693770908">Appeler maintenant <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+    </article>
+    <a class="b b-link b-eau rv" href="traitement-eau.html">
+      <div class="im"><img src="img/osmoseur.jpg" alt="" width="1200" height="622" loading="lazy"></div>
+      <div class="tx"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Traitement de l'eau</h3>
+      <ul class="pills"><li>Stérilisation UV</li><li>Osmoseur</li><li>Ultrafiltration</li><li>Adoucisseur</li></ul>
+      <span class="go">Découvrir <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+    <a class="b b-link b-fuite rv" href="recherche-de-fuite.html" style="--d:.06s">
+      <div class="im"><img src="img/fuite-thermographie.jpg" alt="" width="968" height="578" loading="lazy"></div>
+      <div class="tx"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><h3>Recherche de fuite sans casse</h3>
+      <ul class="pills"><li>Électro-acoustique</li><li>Gaz traceur</li><li>Thermographie</li><li>Fluorescéine</li></ul>
+      <span class="go">Découvrir <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+    <a class="b b-link b-ce rv" href="chauffe-eau.html" style="--d:.12s">
+      <div class="im"><img src="img/ce-installe.jpg" alt="" width="505" height="565" loading="lazy"></div>
+      <div class="tx"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M12 9c1.2 1.5 2 2.4 2 3.6a2 2 0 0 1-4 0c0-1.2.8-2.1 2-3.6z"/><path d="M9 18.5h6"/></svg></span><h3>Installation de chauffe-eau</h3>
+      <ul class="pills"><li>Instantané</li><li>Blindé et stéatite</li><li>Thermodynamique</li><li>Connecté</li></ul>
+      <span class="go">Découvrir <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+  </div>
+</div></section>
+
+<section class="works band navy sec" id="realisations"><div class="wrap">
+  <div class="head split"><div><span class="tag dark rv">Photos de nos réalisations</span><h2 class="rv">Des salles de bain<br>soignées, du sol au plafond.</h2></div>
+    <p class="muted rv" style="max-width:44ch">Chaque photo témoigne de notre souci du détail. Touchez une image pour l'agrandir.</p></div>
+  <div class="feat"><a class="ph p0 rv-img" href="img/sdb-baignoire-ilot-jardin.jpg" data-lb data-cap="Baignoire îlot, frise terracotta et double vasque, avec vue sur le jardin"><img src="img/sdb-baignoire-ilot-jardin.jpg" alt="Baignoire îlot, frise terracotta et double vasque, avec vue sur le jardin" width="1920" height="1440" loading="lazy"><span class="cap">Baignoire îlot, frise terracotta et double vasque, avec vue sur le jardin</span><span class="zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a><a class="ph p1 rv-img" href="img/sdb-mosaique-noire.jpg" data-lb data-cap="Mosaïque noire pailletée, miroir rétroéclairé et double vasque blanche"><img src="img/sdb-mosaique-noire.jpg" alt="Mosaïque noire pailletée, miroir rétroéclairé et double vasque blanche" width="900" height="1600" loading="lazy"><span class="cap">Mosaïque noire pailletée, miroir rétroéclairé et double vasque blanche</span><span class="zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a><a class="ph p2 rv-img" href="img/sdb-double-vasque-bois.jpg" data-lb data-cap="Double vasque à tiroirs effet bois, miroir et suspensions lumineuses"><img src="img/sdb-double-vasque-bois.jpg" alt="Double vasque à tiroirs effet bois, miroir et suspensions lumineuses" width="1200" height="1600" loading="lazy"><span class="cap">Double vasque à tiroirs effet bois, miroir et suspensions lumineuses</span><span class="zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a><a class="ph p3 rv-img" href="img/sdb-baignoire-verriere.jpg" data-lb data-cap="Baignoire et douche, porte verrière noire, carrelage effet marbre"><img src="img/sdb-baignoire-verriere.jpg" alt="Baignoire et douche, porte verrière noire, carrelage effet marbre" width="1200" height="1600" loading="lazy"><span class="cap">Baignoire et douche, porte verrière noire, carrelage effet marbre</span><span class="zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a><a class="ph p4 rv-img" href="img/sdb-douche-bois-pierre.jpg" data-lb data-cap="Douche en carrelage effet bois et pierre grise, meuble gris et miroir rond"><img src="img/sdb-douche-bois-pierre.jpg" alt="Douche en carrelage effet bois et pierre grise, meuble gris et miroir rond" width="1200" height="1600" loading="lazy"><span class="cap">Douche en carrelage effet bois et pierre grise, meuble gris et miroir rond</span><span class="zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a></div>
+  <details class="more"><summary class="btn light"><span class="c">Voir 8 autres réalisations</span><span class="o">Masquer les photos</span> <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></summary><div class="more-grid"><a class="ph rv" href="img/sdb-baignoire-ilot.jpg" data-lb data-cap="Baignoire îlot et frise terracotta"><img src="img/sdb-baignoire-ilot.jpg" alt="Baignoire îlot et frise terracotta" width="1600" height="1200" loading="lazy"><span class="cap">Baignoire îlot et frise terracotta</span></a><a class="ph rv" href="img/sdb-douche-noire.jpg" data-lb data-cap="Douche à robinetterie noire et meuble effet bois"><img src="img/sdb-douche-noire.jpg" alt="Douche à robinetterie noire et meuble effet bois" width="1200" height="1600" loading="lazy"><span class="cap">Douche à robinetterie noire et meuble effet bois</span></a><a class="ph rv" href="img/sdb-baignoire-ilot-blanche.jpg" data-lb data-cap="Baignoire îlot et grande douche vitrée"><img src="img/sdb-baignoire-ilot-blanche.jpg" alt="Baignoire îlot et grande douche vitrée" width="1600" height="1200" loading="lazy"><span class="cap">Baignoire îlot et grande douche vitrée</span></a><a class="ph rv" href="img/sdb-douche-baignoire-vasques.jpg" data-lb data-cap="Douche vitrée, baignoire îlot et double vasque"><img src="img/sdb-douche-baignoire-vasques.jpg" alt="Douche vitrée, baignoire îlot et double vasque" width="1200" height="1600" loading="lazy"><span class="cap">Douche vitrée, baignoire îlot et double vasque</span></a><a class="ph rv" href="img/sdb-douche-vasque.jpg" data-lb data-cap="Douche vitrée, baignoire et meuble vasque"><img src="img/sdb-douche-vasque.jpg" alt="Douche vitrée, baignoire et meuble vasque" width="1200" height="1600" loading="lazy"><span class="cap">Douche vitrée, baignoire et meuble vasque</span></a><a class="ph rv" href="img/sdb-wc-suspendu.jpg" data-lb data-cap="WC suspendu et baignoire"><img src="img/sdb-wc-suspendu.jpg" alt="WC suspendu et baignoire" width="1200" height="1600" loading="lazy"><span class="cap">WC suspendu et baignoire</span></a><a class="ph rv" href="img/sdb-baignoire-radiateur.jpg" data-lb data-cap="Baignoire îlot et sèche-serviettes"><img src="img/sdb-baignoire-radiateur.jpg" alt="Baignoire îlot et sèche-serviettes" width="1200" height="1600" loading="lazy"><span class="cap">Baignoire îlot et sèche-serviettes</span></a><a class="ph rv" href="img/sdb-vasque-bois.jpg" data-lb data-cap="Double vasque et meuble effet bois"><img src="img/sdb-vasque-bois.jpg" alt="Double vasque et meuble effet bois" width="1200" height="1600" loading="lazy"><span class="cap">Double vasque et meuble effet bois</span></a></div></details>
+</div></section>
+
+<section class="sec" id="temoignages"><div class="wrap">
+  <div class="head split"><div><span class="tag rv">Témoignages</span><h2 class="rv">Ce que disent<br>nos clients.</h2></div>
+    <div class="gbox rv"><b>5,0</b><div><span class="stars">★★★★★</span><span>22 avis Google</span></div></div></div>
+  <div class="revs"><blockquote class="rev rv" style="--d:0.0s"><span class="stars" aria-label="5 étoiles">★★★★★</span><p>Je vous recommande Avenir Plomberie 974 les yeux fermés&nbsp;! Rapidité, efficacité, minutie. M. Jacquet a fait preuve d'un réel professionnalisme et a vraiment pris le temps de bien faire les réparations, de tout m'expliquer et de faire les vérifications. Si vous cherchez un super plombier, foncez&nbsp;!</p><footer><span class="av" aria-hidden="true">C</span><cite>Coline B.<span>Recommandation Facebook</span></cite></footer></blockquote><blockquote class="rev rv" style="--d:0.08s"><span class="stars" aria-label="5 étoiles">★★★★★</span><p>Appelés à 12&nbsp;h pour une fuite importante, à 15&nbsp;h la fuite était réparée. Très professionnels, avec de bons conseils. Tarif clair et correspondant au travail effectué. Encore merci.</p><footer><span class="av" aria-hidden="true">J</span><cite>Jérôme C.<span>Recommandation Facebook</span></cite></footer></blockquote><blockquote class="rev rv" style="--d:0.16s"><span class="stars" aria-label="5 étoiles">★★★★★</span><p>Réactif, précis, arrangeant. Les tarifs sont clairs, raisonnables, et le travail de qualité. Artisan à l'écoute et très sérieux. Devis, intervention, factures traités à distance avec grande efficacité.</p><footer><span class="av" aria-hidden="true">C</span><cite>Claude P.<span>Recommandation Facebook</span></cite></footer></blockquote><blockquote class="rev rv" style="--d:0.0s"><span class="stars" aria-label="5 étoiles">★★★★★</span><p>Entreprise sérieuse et réactive avec laquelle nous collaborons depuis peu. Les interventions sont propres et rapides, et les comptes-rendus sont clairs. Je recommande fortement.</p><footer><span class="av" aria-hidden="true">E</span><cite>Emmanuel G.<span>Agence immobilière, Saint-Gilles · 5/5</span></cite></footer></blockquote><blockquote class="rev rv" style="--d:0.08s"><span class="stars" aria-label="5 étoiles">★★★★★</span><p>Intervention sur une fuite. Rapide, efficace, consciencieux et, ce qui ne gâche rien, sympathique. Aucune surprise sur le devis. Je le recommande vivement.</p><footer><span class="av" aria-hidden="true">F</span><cite>Frédéric A.<span>Recommandation Facebook</span></cite></footer></blockquote><blockquote class="rev rv" style="--d:0.16s"><span class="stars" aria-label="5 étoiles">★★★★★</span><p>Très bien&nbsp;: intervention rapide pour une fuite urgente au niveau du robinet d'arrivée d'eau. Et très sympa.</p><footer><span class="av" aria-hidden="true">A</span><cite>Avis client<span>Septembre 2024 · 5/5</span></cite></footer></blockquote></div><p class="revs-hint muted" style="display:none;font-size:14px;margin-top:10px">Faites glisser pour lire les autres avis →</p>
+</div></section>
+
+<section class="zone band sand sec" id="zone"><div class="wrap grid">
+  <div class="left">
+    <span class="tag rv">Zone d'intervention</span>
+    <h2 class="rv">Depuis Saint&#8209;Leu, dans tout l'Ouest de l'île.</h2>
+    <p class="rv">Nous intervenons principalement dans l'Ouest de La Réunion, et nous pouvons nous déplacer dans d'autres zones de l'île selon les projets.</p>
+    <div class="chips rv"><span>Saint-Leu</span><span>Saint-Paul</span><span>Les Trois-Bassins</span><span>La Saline-les-Bains</span><span>L'Étang-Salé</span><span>Le Port</span></div>
+    <a class="link rv" href="https://www.google.com/maps/search/?api=1&query=63+B+chemin+Boussole+97436+Saint-Leu+La+R%C3%A9union" target="_blank" rel="noopener">Voir l'adresse sur Google Maps <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="map rv" data-in><svg class="island" viewBox="-40 -20 1060 930" role="img" aria-labelledby="map-t">
+  <title id="map-t">Carte de La Réunion&nbsp;: zone d'intervention d'Avenir Plomberie dans l'Ouest de l'île, depuis Saint-Leu</title>
+  <defs><radialGradient id="halo"><stop offset="0" stop-color="#ffc228" stop-opacity=".55"/><stop offset="1" stop-color="#ffc228" stop-opacity="0"/></radialGradient></defs>
+  <g class="communes"><path class="o" d="M286 537L286 525L288 523L285 523L283 526L282 529L281 530L280 533L278 541L275 545L275 547L277 549L277 552L277 554L274 557L275 561L274 563L273 566L269 569L268 570L267 573L264 575L263 579L263 582L258 582L255 586L251 588L249 588L246 591L244 591L240 594L241 596L237 599L238 601L237 602L235 606L234 609L235 612L239 612L242 617L243 617L242 619L242 623L242 625L242 627L241 629L241 632L242 633L240 639L239 643L237 644L236 648L235 651L238 658L234 656L230 652L227 651L228 648L226 648L224 647L221 646L219 647L215 646L214 645L209 645L207 644L202 643L198 641L196 639L193 638L192 638L190 644L188 646L188 648L187 647L185 648L185 646L186 644L186 641L188 640L189 639L189 637L191 634L189 632L190 629L193 626L193 622L196 619L198 616L198 613L200 612L201 610L204 610L204 608L205 606L206 603L207 600L208 600L209 597L208 596L209 591L208 590L208 588L210 588L212 587L211 584L212 582L211 580L213 579L214 579L215 577L216 577L217 574L220 572L220 569L223 567L225 566L227 564L228 560L231 559L234 553L238 550L241 546L246 544L249 540L252 536L256 534L257 533L260 530L260 529L263 526L265 524L267 521L271 519L271 517L274 513L275 512L277 510L280 509L283 505L283 502L285 501L287 495L291 491L301 486L302 484L304 483L307 480L310 478L312 474L314 471L316 469L316 473L315 476L314 480L311 486L311 490L307 496L308 498L307 500L307 502L303 506L302 506L300 509L298 509L297 510L294 511L293 513L294 515L293 517L290 520L290 524L291 528L290 533L288 537L286 537Z"><title>Avirons</title></path><path class="o" d="M542 351L543 349L545 348L552 342L554 338L556 336L556 334L557 329L556 325L556 323L556 318L555 314L556 312L555 311L556 308L555 304L553 302L553 299L552 299L550 300L549 298L547 298L547 295L545 293L545 291L546 290L547 288L549 283L550 283L552 277L552 271L554 268L555 267L557 262L559 262L565 260L569 256L569 254L570 252L573 252L572 249L575 247L579 247L581 245L585 244L587 242L590 241L592 240L591 238L591 235L592 233L595 235L599 236L604 235L606 234L608 234L610 235L614 235L617 234L622 232L629 229L633 226L635 223L637 218L639 215L643 216L649 216L652 217L654 214L656 212L660 210L662 206L664 206L667 204L673 199L676 196L681 194L685 194L687 195L692 195L697 195L700 196L708 202L716 204L721 206L727 207L736 203L739 202L747 198L749 197L752 197L755 198L761 197L770 196L769 206L770 214L769 215L770 221L770 235L770 241L768 239L764 241L763 242L760 242L758 241L756 244L752 245L747 246L745 245L742 245L735 248L734 250L735 253L731 252L729 253L731 259L729 261L724 260L722 261L722 263L723 268L725 272L725 275L727 279L725 282L721 284L718 285L715 286L710 287L708 289L706 289L701 287L693 288L691 289L685 287L683 287L682 286L679 289L675 289L670 292L668 293L669 294L667 296L665 297L664 298L661 298L658 299L657 299L655 298L652 297L649 298L646 298L645 298L644 302L640 305L640 307L638 310L636 310L636 314L634 315L635 318L634 320L633 323L630 324L629 327L628 327L626 330L623 333L622 337L620 339L617 340L614 343L612 345L611 347L608 350L606 353L604 355L603 358L601 361L597 364L596 369L596 372L593 371L590 371L588 372L583 369L580 368L576 367L576 365L573 362L570 360L568 359L564 359L563 357L558 356L553 351L551 351L548 353L546 353L542 351Z"><title>Bras-Panon</title></path><path class="o" d="M404 553L405 551L408 550L410 547L413 546L417 543L422 545L428 543L429 541L434 540L437 538L442 535L443 534L447 531L451 528L454 525L456 518L456 514L459 510L458 505L459 503L462 498L462 496L464 493L464 488L463 485L465 476L464 473L467 470L468 469L471 465L472 461L474 462L477 461L479 459L482 459L485 460L490 458L493 458L497 455L501 455L503 455L503 456L501 457L498 461L500 464L500 466L496 465L494 468L495 470L499 475L501 479L501 481L499 486L499 487L501 490L501 492L504 500L505 500L505 504L505 509L507 513L509 516L510 518L511 521L510 526L508 530L509 534L508 534L508 538L505 536L505 533L498 532L492 534L488 536L487 537L486 539L485 546L486 551L485 557L483 559L485 561L486 563L484 566L478 570L474 568L472 570L474 573L475 576L478 580L479 580L483 584L481 590L478 593L480 593L482 596L481 598L478 599L480 603L480 605L475 610L472 610L469 610L465 613L463 613L461 615L461 617L462 620L458 624L455 625L450 626L448 625L443 625L444 629L445 632L448 633L447 637L446 637L444 641L439 643L436 646L435 647L433 648L430 651L428 652L426 652L425 654L417 656L415 665L417 667L417 670L417 672L416 675L411 678L410 681L411 684L408 689L405 691L403 695L400 699L393 703L393 700L395 694L396 694L398 691L399 688L401 684L400 682L395 678L396 677L401 676L402 673L402 671L403 668L405 665L406 659L406 655L407 654L407 650L403 646L402 643L403 641L403 637L401 632L399 631L400 625L399 623L399 618L401 612L402 605L401 602L401 596L402 593L404 590L405 587L405 583L405 580L404 578L403 573L402 572L401 562L404 558L404 553Z"><title>Entre-Deux</title></path><path class="w" d="M294 713L293 713L287 710L286 709L279 707L274 705L262 702L259 701L252 699L247 698L244 699L239 698L235 696L232 697L226 696L224 695L221 695L219 694L217 695L215 694L213 691L208 689L205 685L203 681L204 678L207 676L207 674L204 669L203 668L203 665L203 662L201 657L199 655L192 650L188 648L188 646L190 644L192 638L193 638L196 639L198 641L202 643L207 644L209 645L214 645L215 646L219 647L221 646L224 647L226 648L228 648L227 651L230 652L234 656L238 658L235 651L236 648L237 644L239 643L240 639L242 633L241 632L241 629L242 627L242 625L242 623L242 619L243 617L242 617L239 612L235 612L234 609L235 606L237 602L238 601L237 599L241 596L240 594L244 591L246 591L249 588L251 588L255 586L258 582L263 582L263 579L264 575L267 573L268 570L269 569L273 566L274 563L275 561L274 557L277 554L277 552L277 549L275 547L275 545L278 541L280 533L281 530L282 529L283 526L285 523L288 523L286 525L286 537L285 538L286 544L282 551L281 554L280 555L280 557L281 560L282 561L281 563L285 567L287 569L290 569L291 570L291 574L292 577L294 581L294 584L292 590L292 593L291 595L291 598L290 602L291 604L289 608L289 617L290 623L291 629L291 633L291 635L292 637L293 642L295 644L296 650L295 652L296 653L297 657L296 658L296 661L294 664L292 665L290 667L291 671L291 676L288 681L278 696L278 697L281 699L284 702L284 704L286 707L292 710L294 712L294 713Z"><title>Étang-Salé</title></path><path class="o" d="M589 845L588 845L582 848L580 848L578 850L572 851L567 850L565 847L562 846L558 845L556 846L553 846L551 844L549 845L547 843L545 843L544 845L542 846L540 848L538 847L538 843L538 842L532 837L531 837L528 837L526 835L521 833L521 831L517 830L517 827L519 824L519 821L520 818L519 817L520 814L520 811L521 809L522 806L524 805L524 801L526 798L526 795L527 794L528 792L528 790L530 785L529 783L530 782L531 779L529 770L532 766L534 763L537 760L538 761L541 760L544 757L546 756L549 754L554 753L555 752L557 752L562 752L564 753L566 753L569 751L570 749L572 749L573 746L577 745L583 744L584 742L586 742L586 737L586 735L588 732L592 733L594 729L596 727L596 725L597 723L599 722L601 720L604 719L605 713L607 712L606 710L610 708L622 706L621 711L622 713L624 722L621 724L621 725L620 727L617 729L616 731L617 734L616 736L614 738L612 738L609 742L608 743L605 744L604 745L601 746L599 748L601 749L597 753L598 754L598 756L598 758L596 759L596 762L596 765L597 766L596 767L596 770L594 772L593 772L593 776L592 778L594 781L600 785L599 790L600 792L598 795L599 797L600 803L599 804L599 812L599 817L599 820L600 822L598 824L595 829L593 831L591 832L590 831L588 835L588 840L590 843L589 845ZM568 852L567 853L565 853L566 851L568 852Z"><title>Petite-Île</title></path><path class="o" d="M709 566L701 557L701 556L699 553L698 550L696 549L696 546L693 541L693 540L689 535L687 532L687 530L685 528L685 524L683 522L680 520L675 511L675 509L673 506L668 507L665 509L661 512L661 516L660 516L657 518L655 521L655 524L653 528L652 530L648 531L641 533L639 529L636 529L633 530L633 532L629 531L628 530L626 530L624 528L620 528L617 525L616 523L616 518L615 518L611 520L609 519L607 518L605 518L602 516L602 513L602 510L600 509L597 506L595 501L599 500L599 497L599 492L600 490L598 487L594 482L596 479L593 477L591 477L589 476L589 473L585 470L585 466L587 466L587 464L588 461L585 457L580 457L577 456L573 451L575 449L575 447L578 444L582 444L585 440L589 438L595 437L599 438L601 439L602 439L605 443L607 444L609 446L610 446L612 445L615 445L616 441L618 440L620 438L625 438L630 439L630 440L633 439L634 437L636 436L637 434L639 431L641 430L643 428L646 427L650 427L653 425L654 426L658 425L660 424L662 425L663 422L666 419L667 415L668 414L669 412L670 410L671 409L672 406L674 404L679 403L685 400L693 401L695 403L701 404L711 417L730 439L730 440L750 463L761 477L782 502L793 515L787 517L783 520L779 521L778 522L774 524L767 533L761 538L758 538L756 538L752 539L751 538L747 538L743 535L740 535L738 536L733 539L731 544L730 548L727 551L725 552L723 554L720 555L716 560L714 562L711 564L709 566Z"><title>Plaine-des-Palmistes</title></path><path class="w" d="M119 161L119 157L120 152L123 148L124 143L124 140L125 138L126 133L125 127L129 128L128 129L127 135L127 136L126 141L129 139L129 136L128 133L129 129L132 130L131 133L133 133L134 130L135 130L135 126L134 125L135 121L133 120L133 118L135 118L136 117L132 116L131 119L132 120L131 123L133 125L128 124L130 121L129 118L129 114L128 110L129 108L134 105L136 105L138 104L139 105L144 108L153 112L161 114L167 114L170 114L170 113L182 113L184 114L184 117L176 118L176 121L184 120L187 122L187 124L189 124L192 124L192 115L189 114L190 113L195 113L201 112L199 116L199 120L193 127L194 128L200 133L200 134L185 170L186 172L183 180L178 176L175 170L173 170L169 166L165 164L150 160L145 160L141 159L131 159L124 161L119 161Z"><title>Port</title></path><path class="o" d="M402 256L401 260L401 262L400 265L401 268L403 273L403 275L400 277L391 281L391 283L391 286L391 291L392 295L391 300L391 305L391 308L392 311L391 316L391 319L390 322L391 325L391 326L389 329L389 331L378 338L375 341L377 343L379 345L380 345L382 348L384 349L391 360L392 362L395 363L398 366L401 367L402 367L405 368L407 372L401 373L398 374L394 374L390 371L385 369L382 369L379 371L375 374L374 373L372 373L371 375L373 376L373 379L370 382L367 383L362 383L362 384L360 383L357 383L352 382L348 384L346 389L343 389L341 391L339 390L336 388L331 384L329 381L326 380L324 378L322 373L320 372L318 373L315 372L313 370L315 367L315 365L318 363L321 359L323 358L324 357L328 352L328 350L330 349L331 346L335 343L335 339L332 335L331 334L329 331L327 330L327 329L323 327L320 325L317 325L318 322L317 321L315 320L315 318L314 316L311 313L311 309L312 306L312 305L313 299L311 297L311 295L313 292L312 290L309 287L310 286L308 284L308 281L304 279L304 277L309 275L311 271L313 270L313 267L315 265L313 262L313 260L312 257L308 254L310 251L309 247L308 246L305 244L302 244L301 240L298 238L296 239L292 238L290 233L287 230L284 228L280 229L275 230L272 229L269 226L267 223L266 221L266 219L265 214L263 212L260 210L257 208L255 204L253 202L250 201L246 198L244 195L243 193L238 190L233 190L231 188L224 187L222 187L214 186L210 184L206 184L194 183L191 181L183 180L186 172L185 170L200 134L200 133L194 128L193 127L199 120L199 116L201 112L205 109L211 108L218 104L222 103L224 100L228 96L233 87L234 85L243 81L246 79L250 76L256 69L257 67L261 64L263 62L269 60L271 60L270 64L272 66L273 72L272 75L275 80L275 84L277 85L279 87L279 90L283 95L285 97L286 100L287 100L291 103L291 104L290 105L290 108L291 112L291 114L293 115L293 119L295 120L296 122L295 125L295 130L297 132L301 136L302 139L304 140L305 142L306 142L308 146L309 148L311 147L313 149L313 150L315 153L319 159L318 165L316 171L317 174L317 177L316 179L316 182L314 185L313 186L315 188L316 191L314 195L315 197L312 204L316 204L320 204L322 203L327 202L338 203L345 208L346 211L352 213L356 214L359 215L361 215L362 214L367 215L371 220L378 227L380 228L384 230L389 234L391 238L392 239L396 244L395 246L397 249L399 252L400 253L402 256Z"><title>Possession</title></path><path class="o" d="M770 196L761 197L755 198L752 197L749 197L747 198L739 202L736 203L727 207L721 206L716 204L708 202L700 196L697 195L692 195L687 195L685 194L681 194L676 196L673 199L667 204L664 206L662 206L660 210L656 212L654 214L652 217L649 216L643 216L639 215L637 218L635 223L633 226L629 229L622 232L617 234L614 235L610 235L608 234L606 234L604 235L599 236L595 235L592 233L593 231L591 229L589 231L587 230L582 227L576 220L578 219L580 219L583 216L583 212L585 210L588 206L589 204L591 201L593 198L596 196L597 194L602 190L603 186L605 186L605 183L608 182L609 180L611 180L613 178L614 178L617 176L619 177L621 175L622 175L626 173L629 173L631 172L632 170L633 167L634 166L638 164L641 161L645 160L646 158L650 154L652 153L655 157L657 158L660 158L662 156L663 154L666 154L668 155L669 152L673 151L672 149L674 144L679 139L677 137L679 137L680 139L683 135L685 136L685 132L686 130L687 126L686 124L684 123L682 123L680 118L679 115L676 115L674 113L671 114L671 110L670 109L667 107L663 109L661 107L661 100L662 97L662 90L663 86L659 83L670 87L678 88L689 92L694 95L703 100L707 102L710 105L715 108L717 110L720 116L723 120L730 127L736 134L743 139L745 142L750 150L751 153L753 157L755 160L756 162L759 167L763 172L764 174L766 180L767 184L768 189L770 196Z"><title>Saint-André</title></path><path class="o" d="M454 415L457 410L459 407L463 402L463 399L466 396L469 394L472 392L475 390L477 387L484 386L488 384L490 382L493 376L493 372L496 367L496 365L498 363L502 363L505 369L507 369L511 366L516 365L517 361L521 358L523 358L527 359L535 355L539 355L541 354L542 351L546 353L548 353L551 351L553 351L558 356L563 357L564 359L568 359L570 360L573 362L576 365L576 367L580 368L583 369L588 372L590 371L593 371L596 372L596 369L597 364L601 361L603 358L604 355L606 353L608 350L611 347L612 345L614 343L617 340L620 339L622 337L623 333L626 330L628 327L629 327L630 324L633 323L634 320L635 318L634 315L636 314L636 310L638 310L640 307L640 305L644 302L645 298L646 298L649 298L652 297L655 298L657 299L658 299L661 298L664 298L665 297L667 296L669 294L668 293L670 292L675 289L679 289L682 286L683 287L685 287L691 289L693 288L701 287L706 289L708 289L710 287L715 286L718 285L721 284L725 282L727 279L725 275L725 272L723 268L722 263L722 261L724 260L729 261L731 259L729 253L731 252L735 253L734 250L735 248L742 245L745 245L747 246L752 245L756 244L758 241L760 242L763 242L764 241L768 239L770 241L771 250L773 258L774 261L776 262L777 264L776 266L778 271L780 275L781 277L784 278L793 281L797 284L800 288L801 289L802 292L804 295L806 295L810 306L815 310L817 311L819 313L817 320L817 325L818 330L819 333L824 341L826 344L829 349L833 354L836 358L844 366L848 369L853 375L855 378L860 384L864 394L866 397L870 400L873 402L870 406L865 409L859 415L854 419L850 421L847 425L846 429L845 433L842 436L841 436L840 439L838 439L837 440L836 444L833 446L834 448L832 448L832 450L833 452L834 452L836 455L835 456L832 456L830 456L832 458L831 460L833 462L835 467L838 465L840 466L841 467L841 469L839 472L837 471L836 474L834 475L836 478L836 480L835 482L833 482L832 484L830 485L831 488L824 488L824 491L824 495L825 498L821 502L818 506L817 508L814 508L809 508L807 509L802 510L800 512L796 513L793 515L782 502L761 477L750 463L730 440L730 439L711 417L701 404L695 403L693 401L685 400L679 403L674 404L672 406L671 409L670 410L669 412L668 414L667 415L666 419L663 422L662 425L660 424L658 425L654 426L653 425L650 427L646 427L643 428L641 430L639 431L637 434L636 436L634 437L633 439L630 440L630 439L625 438L620 438L618 440L616 441L615 445L612 445L610 446L609 446L607 444L605 443L602 439L601 439L599 438L595 437L589 438L585 440L582 444L578 444L575 447L575 449L573 451L570 453L566 456L563 457L558 458L556 457L552 457L547 460L543 459L539 456L535 454L533 452L528 456L526 456L520 457L519 457L516 458L512 455L509 456L505 455L503 455L501 455L497 455L493 458L490 458L485 460L482 459L479 459L477 461L474 462L472 461L473 460L472 456L473 453L472 446L470 440L469 438L468 433L465 426L459 419L455 416L454 415Z"><title>Saint-Benoît</title></path><path class="o" d="M402 256L400 253L399 252L397 249L395 246L396 244L392 239L391 238L389 234L384 230L380 228L378 227L371 220L367 215L362 214L361 215L359 215L356 214L352 213L346 211L345 208L338 203L327 202L322 203L320 204L316 204L312 204L315 197L314 195L316 191L315 188L313 186L314 185L316 182L316 179L317 177L317 174L316 171L318 165L319 159L315 153L313 150L313 149L311 147L309 148L308 146L306 142L305 142L304 140L302 139L301 136L297 132L295 130L295 125L296 122L295 120L293 119L293 115L291 114L291 112L290 108L290 105L291 104L291 103L287 100L286 100L285 97L283 95L279 90L279 87L277 85L275 84L275 80L272 75L273 72L272 66L270 64L271 60L276 54L279 52L284 50L287 48L293 44L297 40L300 36L309 33L314 32L320 31L324 30L334 26L336 26L340 24L348 23L355 25L359 26L363 27L368 28L370 27L374 25L377 25L381 20L386 19L390 22L396 29L402 32L406 34L409 37L415 40L417 40L420 40L422 41L426 41L432 41L434 42L439 43L445 42L448 42L457 39L463 38L465 37L469 58L470 67L470 70L471 73L471 75L471 78L471 83L473 86L477 95L479 97L482 103L481 105L480 106L479 109L476 111L475 114L472 115L470 116L469 118L466 120L463 126L465 127L463 134L461 135L461 137L461 139L459 140L458 145L457 146L457 149L453 151L453 154L454 155L452 157L451 158L453 160L454 163L453 167L452 168L449 168L447 169L447 172L446 176L447 177L448 180L447 183L447 185L448 189L448 191L449 193L448 197L447 198L447 201L445 204L446 206L449 206L450 208L450 210L449 212L446 213L444 216L442 215L438 217L437 218L434 219L431 219L431 221L428 223L429 227L428 231L428 233L427 234L424 236L424 238L422 240L421 242L418 245L414 247L409 249L406 252L404 255L402 256Z"><title>Saint-Denis</title></path><path class="o" d="M618 680L618 675L619 671L619 666L618 662L616 659L616 656L616 654L616 648L617 642L618 642L617 638L619 634L623 629L623 624L623 623L622 619L622 616L623 615L623 610L624 608L626 604L626 600L629 596L631 591L634 587L636 584L636 582L639 577L642 573L645 571L648 570L656 562L658 562L659 559L663 555L667 553L672 552L676 554L681 559L687 562L688 562L692 564L694 571L697 577L699 581L699 584L700 589L698 592L699 596L698 599L697 603L695 604L694 607L693 607L693 610L691 614L688 616L688 619L688 621L690 622L737 627L736 632L736 636L737 641L737 646L738 650L739 652L739 656L740 661L741 664L743 668L745 673L749 678L753 682L760 685L761 685L760 689L759 690L756 694L755 697L755 699L754 703L755 706L754 708L754 713L755 715L754 720L752 723L752 727L750 728L750 734L751 739L750 741L752 746L754 747L755 748L755 751L757 753L757 756L758 757L758 759L759 760L759 764L762 767L763 772L764 776L768 780L767 781L769 783L768 789L765 789L766 793L767 794L767 797L767 800L765 802L766 805L766 807L768 810L768 815L770 816L770 819L772 822L775 826L776 826L778 836L777 838L777 841L778 843L777 846L776 846L773 849L772 850L770 852L766 851L763 850L759 851L758 851L754 851L747 849L741 849L737 850L735 852L734 856L732 856L731 858L730 860L728 861L724 864L721 864L717 863L713 862L706 862L699 865L697 867L693 868L691 872L687 873L685 872L682 870L682 867L680 865L674 862L667 862L658 862L655 862L650 863L645 867L639 868L637 868L634 868L632 869L630 869L624 866L619 864L616 859L614 856L612 855L610 855L606 853L603 852L601 851L599 851L599 848L595 844L593 844L592 845L589 845L590 843L588 840L588 835L590 831L591 832L593 831L595 829L598 824L600 822L599 820L599 817L599 812L599 804L600 803L599 797L598 795L600 792L599 790L600 785L594 781L592 778L593 776L593 772L594 772L596 770L596 767L597 766L596 765L596 762L596 759L598 758L598 756L598 754L597 753L601 749L599 748L601 746L604 745L605 744L608 743L609 742L612 738L614 738L616 736L617 734L616 731L617 729L620 727L621 725L621 724L624 722L622 713L621 711L622 706L622 704L622 701L621 698L621 692L621 690L619 687L618 680Z"><title>Saint-Joseph</title></path><path class="w" d="M110 454L111 455L113 453L115 453L119 452L120 452L122 451L124 452L127 452L129 450L131 450L133 448L137 446L141 442L148 441L151 441L157 440L159 438L163 435L170 432L175 431L177 429L179 428L188 428L189 426L193 424L195 425L200 423L204 425L207 425L209 424L216 422L218 421L226 420L232 419L236 420L239 419L244 421L245 421L250 420L253 421L259 420L261 421L262 421L267 422L270 424L276 427L279 428L283 427L286 425L291 425L297 427L298 426L301 427L305 428L307 429L309 429L311 428L313 428L315 429L317 431L321 432L325 432L328 433L332 433L330 435L327 440L324 441L323 443L323 444L322 446L321 450L321 454L320 455L317 455L315 457L314 459L314 462L316 469L314 471L312 474L310 478L307 480L304 483L302 484L301 486L291 491L287 495L285 501L283 502L283 505L280 509L277 510L275 512L274 513L271 517L271 519L267 521L265 524L263 526L260 529L260 530L257 533L256 534L252 536L249 540L246 544L241 546L238 550L234 553L231 559L228 560L227 564L225 566L223 567L220 569L220 572L217 574L216 577L215 577L214 579L213 579L211 580L212 582L211 584L212 587L210 588L208 588L208 590L209 591L208 596L209 597L208 600L207 600L206 603L205 606L204 608L204 610L201 610L200 612L198 613L198 616L196 619L193 622L193 626L190 629L189 632L191 634L189 637L189 639L188 640L186 641L183 638L177 635L175 634L174 633L171 629L171 627L168 625L166 625L165 623L160 621L157 621L156 619L152 617L147 612L143 610L143 608L142 606L142 601L141 599L140 597L137 593L135 586L134 585L133 582L132 580L133 577L131 573L126 569L126 567L124 565L124 564L127 562L128 560L127 557L129 555L130 553L131 549L134 537L133 535L134 533L134 528L134 522L132 510L132 504L134 502L135 500L134 496L127 487L125 484L121 483L117 480L112 479L111 477L111 473L110 472L110 470L108 468L110 467L109 465L110 459L109 457L110 454Z"><title>Saint-Leu</title></path><path class="o" d="M316 473L320 480L323 484L325 487L324 489L325 491L325 494L326 496L327 500L328 502L333 508L340 513L342 514L344 516L345 519L348 523L351 524L354 526L354 531L356 534L358 536L365 538L366 540L366 544L377 546L377 547L384 546L388 550L389 550L391 547L393 547L395 549L404 553L404 558L401 562L402 572L403 573L404 578L405 580L405 583L405 587L404 590L402 593L401 596L401 602L402 605L401 612L399 618L399 623L400 625L399 631L401 632L403 637L403 641L402 643L403 646L407 650L407 654L406 655L406 659L405 665L403 668L402 671L402 673L401 676L396 677L395 678L400 682L401 684L399 688L398 691L396 694L395 694L393 700L393 703L386 704L381 706L375 709L373 710L370 711L365 712L360 714L354 714L350 715L343 715L339 717L337 717L333 721L317 729L314 731L312 729L307 724L305 720L302 718L298 716L294 713L294 712L292 710L286 707L284 704L284 702L281 699L278 697L278 696L288 681L291 676L291 671L290 667L292 665L294 664L296 661L296 658L297 657L296 653L295 652L296 650L295 644L293 642L292 637L291 635L291 633L291 629L290 623L289 617L289 608L291 604L290 602L291 598L291 595L292 593L292 590L294 584L294 581L292 577L291 574L291 570L290 569L287 569L285 567L281 563L282 561L281 560L280 557L280 555L281 554L282 551L286 544L285 538L286 537L288 537L290 533L291 528L290 524L290 520L293 517L294 515L293 513L294 511L297 510L298 509L300 509L302 506L303 506L307 502L307 500L308 498L307 496L311 490L311 486L314 480L315 476L316 473Z"><title>Saint-Louis</title></path><path class="w" d="M83 412L80 410L76 406L74 406L73 404L71 400L68 398L64 396L58 391L54 387L48 381L44 376L41 369L40 369L34 362L32 358L31 353L32 347L33 341L32 340L33 335L33 327L35 323L36 323L37 321L37 319L35 315L33 313L31 308L28 304L25 296L26 291L29 289L33 284L35 283L39 279L40 275L42 275L46 269L50 266L51 264L52 262L54 260L56 260L58 261L61 262L66 263L68 263L72 264L84 258L87 258L90 256L97 252L98 250L101 248L107 243L111 239L115 236L118 233L122 226L124 217L124 210L125 203L127 198L127 195L127 186L126 183L123 173L121 170L119 165L119 161L124 161L131 159L141 159L145 160L150 160L165 164L169 166L173 170L175 170L178 176L183 180L191 181L194 183L206 184L210 184L214 186L222 187L224 187L231 188L233 190L238 190L243 193L244 195L246 198L250 201L253 202L255 204L257 208L260 210L263 212L265 214L266 219L266 221L267 223L269 226L272 229L275 230L280 229L284 228L287 230L290 233L292 238L296 239L298 238L301 240L302 244L305 244L308 246L309 247L310 251L308 254L312 257L313 260L313 262L315 265L313 267L313 270L311 271L309 275L304 277L304 279L308 281L308 284L310 286L309 287L312 290L313 292L311 295L311 297L313 299L312 305L312 306L311 309L311 313L314 316L315 318L315 320L317 321L318 322L317 325L320 325L323 327L327 329L327 330L329 331L331 334L332 335L335 339L335 343L331 346L330 349L328 350L328 352L324 357L323 358L321 359L318 363L315 365L315 367L313 370L315 372L318 373L320 372L322 373L324 378L326 380L329 381L331 384L336 388L339 390L341 391L343 389L346 389L348 384L352 382L357 383L360 383L362 384L362 383L367 383L370 382L373 379L373 376L371 375L372 373L374 373L375 374L379 371L382 369L385 369L390 371L394 374L398 374L401 373L407 372L405 373L403 378L399 380L397 383L396 385L394 384L392 385L393 389L394 394L393 396L391 398L387 399L385 401L376 406L374 408L370 409L366 413L363 416L358 417L357 418L351 418L350 421L347 424L345 424L343 423L342 421L334 418L330 415L328 414L324 411L320 408L316 405L315 403L311 400L307 395L304 395L301 393L292 393L285 392L283 391L281 392L277 393L275 394L270 395L267 393L262 392L260 391L256 390L254 390L252 388L248 386L245 386L242 388L239 387L234 387L233 387L227 386L222 385L214 386L211 387L208 388L204 386L201 386L199 386L195 386L188 383L183 383L181 383L176 384L174 383L170 384L169 383L166 384L165 386L161 387L158 387L155 388L153 387L152 389L150 390L148 391L145 393L143 393L140 394L135 395L126 397L122 399L120 400L117 400L112 404L110 404L107 406L105 406L103 410L100 409L95 410L92 412L90 411L87 412L83 412Z"><title>Saint-Paul</title></path><path class="o" d="M517 830L511 830L503 828L500 826L498 826L497 826L494 823L492 823L490 821L486 821L484 820L477 816L475 816L473 814L472 815L469 813L467 810L463 809L458 809L456 809L454 808L449 808L446 810L443 808L437 812L436 808L435 806L433 806L433 804L431 803L431 801L429 797L428 799L425 798L423 799L415 799L412 798L410 797L406 795L402 795L399 793L394 788L394 786L391 783L392 778L383 772L378 772L375 773L372 772L364 770L362 770L355 769L354 769L345 766L338 761L333 758L325 749L324 747L324 744L322 740L321 738L317 734L314 731L317 729L333 721L337 717L339 717L343 715L350 715L354 714L360 714L365 712L370 711L373 710L375 709L381 706L386 704L393 703L400 699L403 695L405 691L408 689L411 684L410 681L411 678L416 675L417 672L417 670L417 667L415 665L417 656L425 654L426 652L428 652L430 651L432 652L441 661L441 662L449 672L450 672L452 675L455 678L456 678L458 683L457 685L458 688L459 690L462 691L462 692L467 699L473 702L477 705L479 705L484 708L487 713L487 714L486 716L481 721L478 722L476 723L477 727L481 725L484 726L487 725L489 727L490 726L502 738L512 748L513 750L515 753L519 751L520 747L523 747L524 745L526 746L527 745L530 745L535 744L536 742L538 743L543 737L544 735L547 734L547 731L549 730L552 731L555 729L556 728L558 728L559 726L562 726L564 724L567 723L570 723L573 720L576 719L577 715L578 713L578 712L580 710L582 708L582 706L584 702L589 699L592 698L592 697L595 695L597 695L602 692L602 691L605 689L606 686L608 686L610 684L615 682L616 680L618 680L619 687L621 690L621 692L621 698L622 701L622 704L622 706L610 708L606 710L607 712L605 713L604 719L601 720L599 722L597 723L596 725L596 727L594 729L592 733L588 732L586 735L586 737L586 742L584 742L583 744L577 745L573 746L572 749L570 749L569 751L566 753L564 753L562 752L557 752L555 752L554 753L549 754L546 756L544 757L541 760L538 761L537 760L534 763L532 766L529 770L531 779L530 782L529 783L530 785L528 790L528 792L527 794L526 795L526 798L524 801L524 805L522 806L521 809L520 811L520 814L519 817L520 818L519 821L519 824L517 827L517 830Z"><title>Saint-Pierre</title></path><path class="o" d="M770 852L772 850L773 849L776 846L777 846L778 843L777 841L777 838L778 836L776 826L775 826L772 822L770 819L770 816L768 815L768 810L766 807L766 805L765 802L767 800L767 797L767 794L766 793L765 789L768 789L769 783L767 781L768 780L764 776L763 772L762 767L759 764L759 760L758 759L758 757L757 756L757 753L755 751L755 748L754 747L752 746L750 741L751 739L750 734L750 728L752 727L752 723L754 720L755 715L754 713L754 708L755 706L754 703L755 699L755 697L756 694L759 690L760 689L761 685L760 685L753 682L749 678L745 673L743 668L741 664L740 661L739 656L739 652L738 650L737 646L737 641L736 636L736 632L737 627L792 633L851 639L930 647L929 649L926 656L926 659L926 663L928 669L928 674L929 680L928 684L928 687L929 691L930 692L931 695L933 701L936 705L935 710L932 713L931 718L932 722L931 724L930 729L931 731L930 734L931 735L930 740L929 742L930 743L930 746L930 748L930 751L931 754L932 757L931 758L933 769L937 776L936 780L934 786L930 791L924 800L922 805L919 807L918 809L916 809L912 812L910 815L906 816L906 817L902 820L897 824L894 827L892 828L889 830L888 830L886 832L885 834L880 833L878 834L872 833L872 832L868 831L867 830L865 831L862 832L861 831L856 829L853 831L851 835L848 836L847 837L844 837L842 839L840 838L835 839L830 840L826 839L823 840L821 839L820 840L817 841L816 840L811 841L805 845L802 846L797 848L796 849L791 850L787 849L783 851L783 852L779 851L773 852L770 852Z"><title>Saint-Philippe</title></path><path class="o" d="M414 247L418 245L421 242L422 240L424 238L424 236L427 234L428 233L428 231L429 227L428 223L431 221L431 219L434 219L437 218L438 217L442 215L444 216L446 213L449 212L450 210L450 208L449 206L446 206L445 204L447 201L447 198L448 197L449 193L448 191L448 189L447 185L447 183L448 180L447 177L446 176L447 172L447 169L449 168L452 168L453 167L454 163L453 160L451 158L452 157L454 155L453 154L453 151L457 149L457 146L458 145L459 140L461 139L461 137L461 135L463 134L465 127L463 126L466 120L469 118L470 116L472 115L475 114L476 111L479 109L480 106L481 105L482 103L479 97L477 95L473 86L471 83L471 78L471 75L471 73L470 70L470 67L469 58L465 37L466 37L472 38L478 39L488 45L492 46L505 49L518 52L516 53L516 54L520 55L525 57L530 57L533 58L539 58L542 56L544 55L546 54L550 52L552 52L556 53L560 53L565 54L566 55L570 54L573 55L576 56L578 57L578 62L579 66L580 69L576 77L574 83L572 84L573 87L572 89L573 91L572 93L573 95L573 98L571 101L573 101L573 107L573 110L575 111L575 114L576 118L579 121L579 123L581 127L579 129L581 131L580 134L577 137L576 139L573 141L572 143L570 144L568 147L567 147L566 150L565 151L564 155L564 156L562 160L560 161L559 166L559 167L558 170L556 173L554 176L550 185L548 189L546 195L544 196L543 200L541 200L540 202L540 205L539 209L539 210L537 214L536 217L534 218L533 219L532 221L530 224L530 226L527 228L526 232L525 235L524 238L521 238L519 239L512 239L511 240L507 240L502 241L498 241L492 244L488 245L487 243L483 236L478 233L476 231L473 231L471 231L464 232L459 233L454 235L452 237L450 236L444 238L443 239L440 240L432 243L428 244L423 245L419 248L414 247Z"><title>Sainte-Marie</title></path><path class="o" d="M709 566L711 564L714 562L716 560L720 555L723 554L725 552L727 551L730 548L731 544L733 539L738 536L740 535L743 535L747 538L751 538L752 539L756 538L758 538L761 538L767 533L774 524L778 522L779 521L783 520L787 517L793 515L796 513L800 512L802 510L807 509L809 508L814 508L817 508L818 506L821 502L825 498L824 495L824 491L824 488L831 488L830 485L832 484L833 482L835 482L836 480L836 478L834 475L836 474L837 471L839 472L841 469L841 467L840 466L838 465L835 467L833 462L831 460L832 458L830 456L832 456L835 456L836 455L834 452L833 452L832 450L832 448L834 448L833 446L836 444L837 440L838 439L840 439L841 436L842 436L845 433L846 429L847 425L850 421L854 419L859 415L865 409L870 406L873 402L877 405L879 407L882 413L887 422L892 432L895 433L895 434L898 437L902 438L905 438L907 436L910 436L912 437L913 437L923 441L927 445L931 448L933 449L935 452L934 454L938 457L945 461L948 461L950 460L955 464L957 463L958 466L963 468L965 470L963 473L966 475L965 476L966 482L968 483L969 485L970 486L970 488L972 490L972 492L975 495L977 495L976 499L977 502L974 504L974 509L975 512L974 513L975 522L976 525L977 528L980 532L979 533L978 535L976 535L974 537L972 538L967 538L964 537L963 538L961 544L961 545L961 549L962 551L962 554L961 555L962 558L961 559L962 561L961 566L958 571L956 573L952 575L949 578L945 584L945 588L944 589L944 591L943 594L942 597L941 598L939 602L936 606L935 614L936 618L935 625L934 628L932 630L931 633L930 639L930 644L930 647L851 639L792 633L737 627L690 622L688 621L688 619L688 616L691 614L693 610L693 607L694 607L695 604L697 603L698 599L699 596L698 592L700 589L699 584L699 581L699 578L702 573L705 568L706 568L709 566Z"><title>Sainte-Rose</title></path><path class="o" d="M524 238L525 235L526 232L527 228L530 226L530 224L532 221L533 219L534 218L536 217L537 214L539 210L539 209L540 205L540 202L541 200L543 200L544 196L546 195L548 189L550 185L554 176L556 173L558 170L559 167L559 166L560 161L562 160L564 156L564 155L565 151L566 150L567 147L568 147L570 144L572 143L573 141L576 139L577 137L580 134L581 131L579 129L581 127L579 123L579 121L576 118L575 114L575 111L573 110L573 107L573 101L571 101L573 98L573 95L572 93L573 91L572 89L573 87L572 84L574 83L576 77L580 69L579 66L578 62L578 57L584 61L587 62L590 62L593 62L598 59L601 59L604 59L607 61L610 63L616 65L620 68L625 72L631 75L634 77L641 79L645 83L649 84L652 84L659 83L663 86L662 90L662 97L661 100L661 107L663 109L667 107L670 109L671 110L671 114L674 113L676 115L679 115L680 118L682 123L684 123L686 124L687 126L686 130L685 132L685 136L683 135L680 139L679 137L677 137L679 139L674 144L672 149L673 151L669 152L668 155L666 154L663 154L662 156L660 158L657 158L655 157L652 153L650 154L646 158L645 160L641 161L638 164L634 166L633 167L632 170L631 172L629 173L626 173L622 175L621 175L619 177L617 176L614 178L613 178L611 180L609 180L608 182L605 183L605 186L603 186L602 190L597 194L596 196L593 198L591 201L589 204L588 206L585 210L583 212L583 216L580 219L578 219L576 220L571 224L569 225L565 229L563 230L558 232L556 235L550 236L548 238L546 241L544 242L538 241L535 242L532 240L528 240L524 238Z"><title>Sainte-Suzanne</title></path><path class="o" d="M542 351L541 354L539 355L535 355L527 359L523 358L521 358L517 361L516 365L511 366L507 369L505 369L502 363L498 363L496 365L496 367L493 372L493 376L490 382L488 384L484 386L477 387L475 390L472 392L469 394L466 396L463 399L463 402L459 407L457 410L454 415L451 413L450 410L450 408L448 405L446 403L445 402L443 400L441 399L437 398L435 396L432 397L431 395L430 392L431 389L428 385L426 383L425 383L424 381L422 381L421 380L419 379L415 376L412 375L411 373L407 372L405 368L402 367L401 367L398 366L395 363L392 362L391 360L384 349L382 348L380 345L379 345L377 343L375 341L378 338L389 331L389 329L391 326L391 325L390 322L391 319L391 316L392 311L391 308L391 305L391 300L392 295L391 291L391 286L391 283L391 281L400 277L403 275L403 273L401 268L400 265L401 262L401 260L402 256L404 255L406 252L409 249L414 247L419 248L423 245L428 244L432 243L440 240L443 239L444 238L450 236L452 237L454 235L459 233L464 232L471 231L473 231L476 231L478 233L483 236L487 243L488 245L492 244L498 241L502 241L507 240L511 240L512 239L519 239L521 238L524 238L528 240L532 240L535 242L538 241L544 242L546 241L548 238L550 236L556 235L558 232L563 230L565 229L569 225L571 224L576 220L582 227L587 230L589 231L591 229L593 231L592 233L591 235L591 238L592 240L590 241L587 242L585 244L581 245L579 247L575 247L572 249L573 252L570 252L569 254L569 256L565 260L559 262L557 262L555 267L554 268L552 271L552 277L550 283L549 283L547 288L546 290L545 291L545 293L547 295L547 298L549 298L550 300L552 299L553 299L553 302L555 304L556 308L555 311L556 312L555 314L556 318L556 323L556 325L557 329L556 334L556 336L554 338L552 342L545 348L543 349L542 351Z"><title>Salazie</title></path><path class="o" d="M709 566L706 568L705 568L702 573L699 578L699 581L697 577L694 571L692 564L688 562L687 562L681 559L676 554L672 552L667 553L663 555L659 559L658 562L656 562L648 570L645 571L642 573L639 577L636 582L636 584L634 587L631 591L629 596L626 600L626 604L624 608L623 610L623 615L622 616L622 619L623 623L623 624L623 629L619 634L617 638L618 642L617 642L616 648L616 654L616 656L616 659L618 662L619 666L619 671L618 675L618 680L616 680L615 682L610 684L608 686L606 686L605 689L602 691L602 692L597 695L595 695L592 697L592 698L589 699L584 702L582 706L582 708L580 710L578 712L578 713L577 715L576 719L573 720L570 723L567 723L564 724L562 726L559 726L558 728L556 728L555 729L552 731L549 730L547 731L547 734L544 735L543 737L538 743L536 742L535 744L530 745L527 745L526 746L524 745L523 747L520 747L519 751L515 753L513 750L512 748L502 738L490 726L489 727L487 725L484 726L481 725L477 727L476 723L478 722L481 721L486 716L487 714L487 713L484 708L479 705L477 705L473 702L467 699L462 692L462 691L459 690L458 688L457 685L458 683L456 678L455 678L452 675L450 672L449 672L441 662L441 661L432 652L430 651L433 648L435 647L436 646L439 643L444 641L446 637L447 637L448 633L445 632L444 629L443 625L448 625L450 626L455 625L458 624L462 620L461 617L461 615L463 613L465 613L469 610L472 610L475 610L480 605L480 603L478 599L481 598L482 596L480 593L478 593L481 590L483 584L479 580L478 580L475 576L474 573L472 570L474 568L478 570L484 566L486 563L485 561L483 559L485 557L486 551L485 546L486 539L487 537L488 536L492 534L498 532L505 533L505 536L508 538L508 534L509 534L508 530L510 526L511 521L510 518L509 516L507 513L505 509L505 504L505 500L504 500L501 492L501 490L499 487L499 486L501 481L501 479L499 475L495 470L494 468L496 465L500 466L500 464L498 461L501 457L503 456L503 455L505 455L509 456L512 455L516 458L519 457L520 457L526 456L528 456L533 452L535 454L539 456L543 459L547 460L552 457L556 457L558 458L563 457L566 456L570 453L573 451L577 456L580 457L585 457L588 461L587 464L587 466L585 466L585 470L589 473L589 476L591 477L593 477L596 479L594 482L598 487L600 490L599 492L599 497L599 500L595 501L597 506L600 509L602 510L602 513L602 516L605 518L607 518L609 519L611 520L615 518L616 518L616 523L617 525L620 528L624 528L626 530L628 530L629 531L633 532L633 530L636 529L639 529L641 533L648 531L652 530L653 528L655 524L655 521L657 518L660 516L661 516L661 512L665 509L668 507L673 506L675 509L675 511L680 520L683 522L685 524L685 528L687 530L687 532L689 535L693 540L693 541L696 546L696 549L698 550L699 553L701 556L701 557L709 566Z"><title>Tampon</title></path><path class="w" d="M110 454L109 450L109 448L108 447L105 446L105 442L101 440L99 440L97 437L94 433L92 430L86 424L86 423L83 419L81 417L83 415L84 414L83 412L87 412L90 411L92 412L95 410L100 409L103 410L105 406L107 406L110 404L112 404L117 400L120 400L122 399L126 397L135 395L140 394L143 393L145 393L148 391L150 390L152 389L153 387L155 388L158 387L161 387L165 386L166 384L169 383L170 384L174 383L176 384L181 383L183 383L188 383L195 386L199 386L201 386L204 386L208 388L211 387L214 386L222 385L227 386L233 387L234 387L239 387L242 388L245 386L248 386L252 388L254 390L256 390L260 391L262 392L267 393L270 395L275 394L277 393L281 392L283 391L285 392L292 393L301 393L304 395L307 395L311 400L315 403L316 405L320 408L324 411L328 414L330 415L334 418L342 421L343 423L341 425L338 425L336 430L336 431L332 433L328 433L325 432L321 432L317 431L315 429L313 428L311 428L309 429L307 429L305 428L301 427L298 426L297 427L291 425L286 425L283 427L279 428L276 427L270 424L267 422L262 421L261 421L259 420L253 421L250 420L245 421L244 421L239 419L236 420L232 419L226 420L218 421L216 422L209 424L207 425L204 425L200 423L195 425L193 424L189 426L188 428L179 428L177 429L175 431L170 432L163 435L159 438L157 440L151 441L148 441L141 442L137 446L133 448L131 450L129 450L127 452L124 452L122 451L120 452L119 452L115 453L113 453L111 455L110 454Z"><title>Trois-Bassins</title></path><path class="o" d="M332 433L336 431L336 430L338 425L341 425L343 423L345 424L347 424L350 421L351 418L357 418L358 417L363 416L366 413L370 409L374 408L376 406L385 401L387 399L391 398L393 396L394 394L393 389L392 385L394 384L396 385L397 383L399 380L403 378L405 373L407 372L411 373L412 375L415 376L419 379L421 380L422 381L424 381L425 383L426 383L428 385L431 389L430 392L431 395L432 397L435 396L437 398L441 399L443 400L445 402L446 403L448 405L450 408L450 410L451 413L454 415L455 416L459 419L465 426L468 433L469 438L470 440L472 446L473 453L472 456L473 460L472 461L471 465L468 469L467 470L464 473L465 476L463 485L464 488L464 493L462 496L462 498L459 503L458 505L459 510L456 514L456 518L454 525L451 528L447 531L443 534L442 535L437 538L434 540L429 541L428 543L422 545L417 543L413 546L410 547L408 550L405 551L404 553L395 549L393 547L391 547L389 550L388 550L384 546L377 547L377 546L366 544L366 540L365 538L358 536L356 534L354 531L354 526L351 524L348 523L345 519L344 516L342 514L340 513L333 508L328 502L327 500L326 496L325 494L325 491L324 489L325 487L323 484L320 480L316 473L316 469L314 462L314 459L315 457L317 455L320 455L321 454L321 450L322 446L323 444L323 443L324 441L327 440L330 435L332 433Z"><title>Cilaos</title></path></g>
+  
+  <g class="pt"><circle cx="59" cy="384" r="7"/><text x="75" y="390" class="l s">La Saline-les-Bains</text></g>
+  <text x="128" y="112" class="l e">Le Port</text><text x="270" y="300" class="l">Saint-Paul</text><text x="250" y="418" class="l">Les Trois-Bassins</text><text x="232" y="528" class="l big">Saint-Leu</text><text x="262" y="650" class="l">L'Étang-Salé</text><text x="430" y="120" class="g">Saint-Denis</text><text x="560" y="770" class="g">Saint-Pierre</text><text x="800" y="420" class="g">Saint-Benoît</text><text x="600" y="420" class="g">Cilaos</text>
+  <text x="-20" y="760" class="sea">Océan Indien</text>
+  <g class="hq" transform="translate(135 503)"><circle class="pulse" r="16"/><circle class="pulse p2" r="16"/>
+    <path d="M0 0c-14-16-22-27-22-38a22 22 0 0 1 44 0c0 11-8 22-22 38z" transform="translate(0 -4)"/><circle cy="-42" r="8" fill="#ffc228"/></g>
+</svg>
+    <div class="legend"><span><i class="lw"></i>Zone principale</span><span><i class="lo"></i>Autres secteurs, selon les projets</span></div>
+  </div>
+</div></section>
+
+<section class="faq sec" id="questions"><div class="wrap grid">
+  <div class="left"><span class="tag rv">Foire aux questions</span><h2 class="rv">Vos questions, nos réponses.</h2>
+    <p class="rv">Une autre question&nbsp;? Le plus simple est de nous appeler.</p><a class="btn " href="tel:+262693770908">Appeler le 0693 77 09 08 <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></div>
+  <div class="qa">
+    <details open class="rv"><summary>Comment obtenir un devis&nbsp;?<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i></summary><div><p>Contactez-nous via le formulaire ci-dessous ou par téléphone au 0693 77 09 08. Nous vous répondons dans les plus brefs délais. Le devis est gratuit.</p></div></details>
+    <details class="rv"><summary>Quels sont les délais d'intervention&nbsp;?<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i></summary><div><p>Ils dépendent de la disponibilité de nos équipes et de la complexité du travail. Nous nous efforçons d'intervenir le plus rapidement possible.</p></div></details>
+    <details class="rv"><summary>Quelle est votre zone d'intervention&nbsp;?<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i></summary><div><p>Principalement l'Ouest de La Réunion&nbsp;: Saint-Leu, Saint-Paul, Les Trois-Bassins, La Saline-les-Bains, L'Étang-Salé et Le Port. Nous pouvons nous déplacer ailleurs sur l'île selon les projets.</p></div></details>
+    <details class="rv"><summary>Faut-il l'accord de l'assureur avant une recherche de fuite&nbsp;?<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i></summary><div><p>Non. Depuis la convention IRSI du 1<sup>er</sup> juin 2018, toute personne concernée peut faire rechercher la fuite dès le constat du dégât des eaux, sans attendre la déclaration de sinistre ni une expertise.</p><p><a href="recherche-de-fuite.html#irsi">En savoir plus sur la prise en charge</a></p></div></details>
+    <details class="rv"><summary>Chauffe-eau électrique ou thermodynamique&nbsp;?<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i></summary><div><p>L'électrique est simple à installer et convient aux budgets limités. Le thermodynamique coûte plus cher à l'achat, mais consomme jusqu'à 3&nbsp;fois moins d'électricité.</p><p><a href="chauffe-eau.html#comparatif">Voir le comparatif</a></p></div></details>
+    <details class="rv"><summary>L'eau du robinet est-elle potable partout à La Réunion&nbsp;?<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i></summary><div><p>Pas toujours&nbsp;: la moitié des Réunionnais dispose d'une eau de bonne qualité, l'autre moitié d'une eau dont la sécurité sanitaire est insuffisante. Stérilisation UV, osmoseur, ultrafiltration ou adoucisseur&nbsp;: nous vous aidons à choisir.</p><p><a href="traitement-eau.html">Les solutions de traitement</a></p></div></details>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="box">
+  <div class="info">
+    <span class="tag dark rv">Contact</span>
+    <h2 class="rv">Demandez votre <em>devis gratuit</em>.</h2>
+    <p class="rv">Décrivez-nous votre besoin&nbsp;: nous vous rappelons dans les plus brefs délais.</p>
+    <ul class="lines">
+      <li class="rv"><a href="tel:+262693770908"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="t"><small>Téléphone</small>0693 77 09 08</span></a></li>
+      <li class="rv"><a href="mailto:avenirplomberie974@gmail.com"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="t"><small>E-mail</small>avenirplomberie974@<wbr>gmail.com</span></a></li>
+      <li class="rv"><a href="https://www.google.com/maps/search/?api=1&query=63+B+chemin+Boussole+97436+Saint-Leu+La+R%C3%A9union" target="_blank" rel="noopener"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="t"><small>Adresse</small>63 B chemin Boussole, 97436 Saint-Leu</span></a></li>
+      <li class="rv"><span class="row"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="t"><small>Horaires</small><span>Lun.–ven. 7&nbsp;h–19&nbsp;h</span><span>Samedi 8&nbsp;h–12&nbsp;h</span></span></span></li>
+    </ul>
+    <div class="soc rv"><a class="btn ghost" href="https://api.whatsapp.com/send?phone=262693770908" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.3 3.2z"/><path d="M9 8.5c0 3.5 2.6 6.4 6.5 6.6l1-1.6-2-1-1 1c-1.2-.5-2.3-1.6-2.8-2.8l1-1-1-2-1.6.9" fill="currentColor" stroke="none"/></svg> WhatsApp</a><a class="btn ghost" href="https://facebook.com/profile.php?id=61557476102346" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v3.5H8V21h3.5v-7.5H14l.6-3.5h-3.1V8a1 1 0 0 1 1-1H15z" fill="currentColor" stroke="none"/></svg> Facebook</a></div>
+  </div>
+  <form class="form rv" id="form" novalidate>
+    <div class="two"><label>Nom *<input name="nom" required autocomplete="name"></label><label>Téléphone *<input name="tel" type="tel" required autocomplete="tel"></label></div>
+    <label>Adresse e-mail *<input name="email" type="email" required autocomplete="email"></label>
+    <label>Adresse de l'intervention<input name="adresse" autocomplete="street-address" placeholder="Commune, rue…"></label>
+    <fieldset><legend>Votre besoin</legend><div class="opts">
+      <label><input type="radio" name="besoin" value="Dépannage" checked><span>Dépannage</span></label>
+      <label><input type="radio" name="besoin" value="Installation sanitaire"><span>Sanitaire</span></label>
+      <label><input type="radio" name="besoin" value="Recherche de fuite"><span>Fuite</span></label>
+      <label><input type="radio" name="besoin" value="Chauffe-eau"><span>Chauffe-eau</span></label>
+      <label><input type="radio" name="besoin" value="Traitement de l'eau"><span>Eau</span></label>
+    </div></fieldset>
+    <label>Message *<textarea name="message" rows="4" required placeholder="Décrivez votre besoin en quelques mots"></textarea></label>
+    <button class="btn" type="submit">Envoyer ma demande <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></button>
+    <p class="ok" id="form-ok" role="status" hidden>Merci&nbsp;! Dans la version en ligne, votre demande arrivera directement sur avenirplomberie974@gmail.com.</p>
+  </form>
+</div></section>
+
+</main>
+<footer class="foot"><div class="wrap">
+  <div class="top">
+    <div>
+      <a class="brand" href="index.html"><img src="img/logo.jpg" alt="" width="56" height="56" loading="lazy"><span>Avenir Plomberie 974<small>Plombier à Saint-Leu, La Réunion</small></span></a>
+      <p class="blurb">Installation sanitaire, dépannage, traitement de l'eau, recherche de fuite et chauffe-eau dans l'Ouest de La Réunion.</p>
+      <div class="social"><a href="https://facebook.com/profile.php?id=61557476102346" rel="noopener" target="_blank" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v3.5H8V21h3.5v-7.5H14l.6-3.5h-3.1V8a1 1 0 0 1 1-1H15z" fill="currentColor" stroke="none"/></svg></a><a href="https://api.whatsapp.com/send?phone=262693770908" rel="noopener" target="_blank" aria-label="WhatsApp"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.3 3.2z"/><path d="M9 8.5c0 3.5 2.6 6.4 6.5 6.6l1-1.6-2-1-1 1c-1.2-.5-2.3-1.6-2.8-2.8l1-1-1-2-1.6.9" fill="currentColor" stroke="none"/></svg></a><a href="mailto:avenirplomberie974@gmail.com" aria-label="E-mail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></div>
+    </div>
+    <div><h4>Services</h4><ul>
+      <li><a href="index.html#services">Installation sanitaire</a></li>
+      <li><a href="index.html#services">Dépannage</a></li>
+      <li><a href="traitement-eau.html">Traitement de l'eau</a></li>
+      <li><a href="recherche-de-fuite.html">Recherche de fuite</a></li>
+      <li><a href="chauffe-eau.html">Chauffe-eau</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li><a href="tel:+262693770908">0693 77 09 08</a></li>
+      <li><a href="mailto:avenirplomberie974@gmail.com">avenirplomberie974@gmail.com</a></li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=63+B+chemin+Boussole+97436+Saint-Leu+La+R%C3%A9union" rel="noopener" target="_blank">63 B chemin Boussole<br>97436 Saint-Leu</a></li>
+    </ul></div>
+    <div><h4>Horaires</h4><ul>
+      <li>Lundi au vendredi<br><b style="color:var(--ink);font-weight:500">7&nbsp;h – 19&nbsp;h</b></li>
+      <li>Samedi<br><b style="color:var(--ink);font-weight:500">8&nbsp;h – 12&nbsp;h</b></li>
+    </ul></div>
+  </div>
+  <div class="bottom"><span>© Avenir Plomberie 974 · <button type="button" class="legal-link" data-legal>Mentions légales</button></span><span>Maquette réalisée par MDW Agency, proposition non contractuelle</span></div>
+</div></footer>
+<dialog class="legal" id="legal"><h3>Mentions légales</h3>
+  <p>Avenir Plomberie 974</p><p>63 B chemin Boussole, 97436 Saint-Leu, La Réunion</p><p>0693 77 09 08 · avenirplomberie974@gmail.com</p>
+  <p style="margin-top:12px;color:var(--soft)">Maquette de démonstration réalisée par MDW Agency, non indexée et non contractuelle.</p>
+  <button type="button" class="btn" data-legal-close>Fermer <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></button></dialog>
+<div class="callbar"><a class="btn " href="tel:+262693770908">Appeler le 0693 77 09 08 <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></div>
+<dialog class="lb" id="lb" aria-label="Photo agrandie"><div class="in"><img alt=""><p></p></div>
+  <button class="x" type="button" aria-label="Fermer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button><button class="pv" type="button" aria-label="Photo précédente"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button><button class="nx" type="button" aria-label="Photo suivante"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></dialog>
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  // Menu téléphone
+  const burger = $('.burger'), mm = $('#mmenu');
+  const setMenu = (open) => { mm.classList.toggle('open', open); burger.setAttribute('aria-expanded', String(open)); document.body.style.overflow = open ? 'hidden' : '';
+    burger.innerHTML = open ? '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>' : '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>';
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu'); };
+  burger && burger.addEventListener('click', () => setMenu(!mm.classList.contains('open')));
+  $$('#mmenu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', (e) => { if (e.key === 'Escape' && mm.classList.contains('open')) setMenu(false); });
+
+  // Mentions légales
+  const legal = $('#legal');
+  $$('[data-legal]').forEach((b) => b.addEventListener('click', () => legal.showModal()));
+  $$('[data-legal-close]').forEach((b) => b.addEventListener('click', () => legal.close()));
+
+  // Barre d'appel : visible après le premier écran
+  const bar = $('.callbar'), first = $('.hero, .phero');
+  if (bar && first) new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(first);
+
+  // Apparitions
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  $$('.rv, .rv-img, [data-in]').forEach((el) => io.observe(el));
+
+  // Phrase qui se colore mot à mot
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  $$('[data-words]').forEach((el) => {
+    if (still) return;
+    el.innerHTML = el.innerHTML.trim().split(/\s+/).map((w) => `<span class="w">${w}</span>`).join(' ');
+    const ws = $$('.w', el);
+    const upd = () => { const r = el.getBoundingClientRect(); const p = Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (r.height + innerHeight * .35)));
+      const n = Math.round(p * ws.length); ws.forEach((w, i) => w.classList.toggle('on', i < n)); };
+    addEventListener('scroll', upd, { passive: true }); upd();
+  });
+
+  // Visionneuse
+  const lb = $('#lb');
+  if (lb) {
+    const items = $$('[data-lb]'); let k = 0;
+    const show = (i) => { k = (i + items.length) % items.length; const a = items[k]; $('img', lb).src = a.getAttribute('href'); $('img', lb).alt = a.dataset.cap || ''; $('p', lb).textContent = a.dataset.cap || ''; };
+    items.forEach((a, i) => a.addEventListener('click', (e) => { e.preventDefault(); show(i); lb.showModal(); }));
+    $('.x', lb).addEventListener('click', () => lb.close());
+    $('.pv', lb).addEventListener('click', () => show(k - 1));
+    $('.nx', lb).addEventListener('click', () => show(k + 1));
+    lb.addEventListener('click', (e) => { if (e.target === lb || e.target.classList.contains('in')) lb.close(); });
+    lb.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') show(k - 1); if (e.key === 'ArrowRight') show(k + 1); });
+  }
+})();
+
+(() => {
+  requestAnimationFrame(() => setTimeout(() => document.body.classList.add('ready'), 60));
+  // Carrousel des réalisations
+  const sl = [...document.querySelectorAll('.show .sl')], dots = [...document.querySelectorAll('.dots button')], cap = document.getElementById('sl-cap');
+  let k = 0, t;
+  const svg = document.querySelector('.island'), vb = svg.getAttribute('viewBox'), mq = matchMedia('(max-width: 640px)');
+  const setVB = () => svg.setAttribute('viewBox', mq.matches ? '-50 50 640 720' : vb); setVB(); mq.addEventListener('change', setVB);
+  const go = (i) => { k = (i + sl.length) % sl.length; sl.forEach((s, j) => s.classList.toggle('on', j === k)); dots.forEach((d, j) => d.setAttribute('aria-current', String(j === k)));
+    cap.textContent = sl[k].querySelector('img').alt; };
+  const auto = () => { clearInterval(t); t = setInterval(() => go(k + 1), 5000); };
+  dots.forEach((d, j) => d.addEventListener('click', () => { go(j); auto(); }));
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) auto();
+  // Formulaire (maquette)
+  const f = document.getElementById('form');
+  f.addEventListener('submit', (e) => { e.preventDefault(); let ok = true;
+    f.querySelectorAll('[required]').forEach((el) => { const bad = !el.value.trim() || (el.type === 'email' && !/^\S+@\S+\.\S+$/.test(el.value)); el.classList.toggle('err', bad); if (bad) ok = false; });
+    if (ok) { document.getElementById('form-ok').hidden = false; f.reset(); } });
+})();
+</script>
+<script>
+// Visites : GoatCounter, sans cookie (une adresse par artisan). Trois niveaux : ouverte (la visite elle-même),
+// « defile-<dossier> » quand il passe le premier écran, « lu-<dossier> » quand il atteint 60 % de la page (les avis).
+(() => {
+  const slug = location.pathname.split('/').filter((p) => p && p !== 'index.html')[0] || '';
+  const sent = {};
+  const send = (name, title) => { if (sent[name]) return; sent[name] = true; window.goatcounter.count({ path: name + '-' + slug, title, event: true }); };
+  const check = () => {
+    if (!slug || !window.goatcounter || !window.goatcounter.count) return;
+    if (scrollY >= innerHeight * .8) send('defile', 'Maquette : a défilé');
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight * .6) send('lu', 'Maquette parcourue');
+  };
+  addEventListener('scroll', check, { passive: true });
+})();
+</script>
+<script data-goatcounter="https://mdwagency.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
